@@ -1,0 +1,271 @@
+Simulator report for zjw_kongzhixinhao
+Tue Nov 05 20:37:56 2019
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 99 nodes     ;
+; Simulation Coverage         ;      58.75 % ;
+; Total Number of Transitions ; 2197         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C4F324C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      58.75 % ;
+; Total nodes checked                                 ; 99           ;
+; Total output ports checked                          ; 80           ;
+; Total output ports with complete 1/0-value coverage ; 47           ;
+; Total output ports with no 1/0-value coverage       ; 30           ;
+; Total output ports with no 1-value coverage         ; 31           ;
+; Total output ports with no 0-value coverage         ; 32           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |zjw_kongzhixinhao|process_0~8  ; |zjw_kongzhixinhao|process_0~8  ; combout          ;
+; |zjw_kongzhixinhao|CFE~4        ; |zjw_kongzhixinhao|CFE~4        ; combout          ;
+; |zjw_kongzhixinhao|M~6          ; |zjw_kongzhixinhao|M~6          ; combout          ;
+; |zjw_kongzhixinhao|SME~19       ; |zjw_kongzhixinhao|SME~19       ; combout          ;
+; |zjw_kongzhixinhao|process_0~9  ; |zjw_kongzhixinhao|process_0~9  ; combout          ;
+; |zjw_kongzhixinhao|process_0~10 ; |zjw_kongzhixinhao|process_0~10 ; combout          ;
+; |zjw_kongzhixinhao|DL~7         ; |zjw_kongzhixinhao|DL~7         ; combout          ;
+; |zjw_kongzhixinhao|DL~8         ; |zjw_kongzhixinhao|DL~8         ; combout          ;
+; |zjw_kongzhixinhao|XL~1         ; |zjw_kongzhixinhao|XL~1         ; combout          ;
+; |zjw_kongzhixinhao|F~4          ; |zjw_kongzhixinhao|F~4          ; combout          ;
+; |zjw_kongzhixinhao|M~7          ; |zjw_kongzhixinhao|M~7          ; combout          ;
+; |zjw_kongzhixinhao|M~8          ; |zjw_kongzhixinhao|M~8          ; combout          ;
+; |zjw_kongzhixinhao|LD_PC~7      ; |zjw_kongzhixinhao|LD_PC~7      ; combout          ;
+; |zjw_kongzhixinhao|N_WE~6       ; |zjw_kongzhixinhao|N_WE~6       ; combout          ;
+; |zjw_kongzhixinhao|N_CS~8       ; |zjw_kongzhixinhao|N_CS~8       ; combout          ;
+; |zjw_kongzhixinhao|CFE~5        ; |zjw_kongzhixinhao|CFE~5        ; combout          ;
+; |zjw_kongzhixinhao|ZFE~5        ; |zjw_kongzhixinhao|ZFE~5        ; combout          ;
+; |zjw_kongzhixinhao|ZFE~6        ; |zjw_kongzhixinhao|ZFE~6        ; combout          ;
+; |zjw_kongzhixinhao|MADD[0]~2    ; |zjw_kongzhixinhao|MADD[0]~2    ; combout          ;
+; |zjw_kongzhixinhao|RAA[0]~6     ; |zjw_kongzhixinhao|RAA[0]~6     ; combout          ;
+; |zjw_kongzhixinhao|RAA[1]~7     ; |zjw_kongzhixinhao|RAA[1]~7     ; combout          ;
+; |zjw_kongzhixinhao|RWBA[0]~4    ; |zjw_kongzhixinhao|RWBA[0]~4    ; combout          ;
+; |zjw_kongzhixinhao|RWBA[1]~5    ; |zjw_kongzhixinhao|RWBA[1]~5    ; combout          ;
+; |zjw_kongzhixinhao|S[0]         ; |zjw_kongzhixinhao|S[0]         ; padio            ;
+; |zjw_kongzhixinhao|S[1]         ; |zjw_kongzhixinhao|S[1]         ; padio            ;
+; |zjw_kongzhixinhao|S[2]         ; |zjw_kongzhixinhao|S[2]         ; padio            ;
+; |zjw_kongzhixinhao|S[3]         ; |zjw_kongzhixinhao|S[3]         ; padio            ;
+; |zjw_kongzhixinhao|IR[4]        ; |zjw_kongzhixinhao|IR[4]~corein ; combout          ;
+; |zjw_kongzhixinhao|IR[5]        ; |zjw_kongzhixinhao|IR[5]~corein ; combout          ;
+; |zjw_kongzhixinhao|IR[6]        ; |zjw_kongzhixinhao|IR[6]~corein ; combout          ;
+; |zjw_kongzhixinhao|IR[7]        ; |zjw_kongzhixinhao|IR[7]~corein ; combout          ;
+; |zjw_kongzhixinhao|JC           ; |zjw_kongzhixinhao|JC~corein    ; combout          ;
+; |zjw_kongzhixinhao|JZ           ; |zjw_kongzhixinhao|JZ~corein    ; combout          ;
+; |zjw_kongzhixinhao|C            ; |zjw_kongzhixinhao|C~corein     ; combout          ;
+; |zjw_kongzhixinhao|Z            ; |zjw_kongzhixinhao|Z~corein     ; combout          ;
+; |zjw_kongzhixinhao|NOP          ; |zjw_kongzhixinhao|NOP~corein   ; combout          ;
+; |zjw_kongzhixinhao|MOVC         ; |zjw_kongzhixinhao|MOVC~corein  ; combout          ;
+; |zjw_kongzhixinhao|MOVB         ; |zjw_kongzhixinhao|MOVB~corein  ; combout          ;
+; |zjw_kongzhixinhao|MOVA         ; |zjw_kongzhixinhao|MOVA~corein  ; combout          ;
+; |zjw_kongzhixinhao|NOT0         ; |zjw_kongzhixinhao|NOT0~corein  ; combout          ;
+; |zjw_kongzhixinhao|ALU          ; |zjw_kongzhixinhao|ALU~corein   ; combout          ;
+; |zjw_kongzhixinhao|JMP          ; |zjw_kongzhixinhao|JMP~corein   ; combout          ;
+; |zjw_kongzhixinhao|HALT         ; |zjw_kongzhixinhao|HALT~corein  ; combout          ;
+; |zjw_kongzhixinhao|IR[0]        ; |zjw_kongzhixinhao|IR[0]~corein ; combout          ;
+; |zjw_kongzhixinhao|IR[1]        ; |zjw_kongzhixinhao|IR[1]~corein ; combout          ;
+; |zjw_kongzhixinhao|IR[2]        ; |zjw_kongzhixinhao|IR[2]~corein ; combout          ;
+; |zjw_kongzhixinhao|IR[3]        ; |zjw_kongzhixinhao|IR[3]~corein ; combout          ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                      ;
++----------------------------+-------------------------------+------------------+
+; Node Name                  ; Output Port Name              ; Output Port Type ;
++----------------------------+-------------------------------+------------------+
+; |zjw_kongzhixinhao|SME~21  ; |zjw_kongzhixinhao|SME~21     ; combout          ;
+; |zjw_kongzhixinhao|SME~22  ; |zjw_kongzhixinhao|SME~22     ; combout          ;
+; |zjw_kongzhixinhao|FRL~6   ; |zjw_kongzhixinhao|FRL~6      ; combout          ;
+; |zjw_kongzhixinhao|FRR~5   ; |zjw_kongzhixinhao|FRR~5      ; combout          ;
+; |zjw_kongzhixinhao|IN_PC~8 ; |zjw_kongzhixinhao|IN_PC~8    ; combout          ;
+; |zjw_kongzhixinhao|CFE~6   ; |zjw_kongzhixinhao|CFE~6      ; combout          ;
+; |zjw_kongzhixinhao|SME     ; |zjw_kongzhixinhao|SME        ; padio            ;
+; |zjw_kongzhixinhao|LD_IR   ; |zjw_kongzhixinhao|LD_IR      ; padio            ;
+; |zjw_kongzhixinhao|DL      ; |zjw_kongzhixinhao|DL         ; padio            ;
+; |zjw_kongzhixinhao|XL      ; |zjw_kongzhixinhao|XL         ; padio            ;
+; |zjw_kongzhixinhao|F       ; |zjw_kongzhixinhao|F          ; padio            ;
+; |zjw_kongzhixinhao|FRL     ; |zjw_kongzhixinhao|FRL        ; padio            ;
+; |zjw_kongzhixinhao|FRR     ; |zjw_kongzhixinhao|FRR        ; padio            ;
+; |zjw_kongzhixinhao|CF      ; |zjw_kongzhixinhao|CF         ; padio            ;
+; |zjw_kongzhixinhao|ZF      ; |zjw_kongzhixinhao|ZF         ; padio            ;
+; |zjw_kongzhixinhao|M       ; |zjw_kongzhixinhao|M          ; padio            ;
+; |zjw_kongzhixinhao|LD_PC   ; |zjw_kongzhixinhao|LD_PC      ; padio            ;
+; |zjw_kongzhixinhao|IN_PC   ; |zjw_kongzhixinhao|IN_PC      ; padio            ;
+; |zjw_kongzhixinhao|N_WE    ; |zjw_kongzhixinhao|N_WE       ; padio            ;
+; |zjw_kongzhixinhao|N_CS    ; |zjw_kongzhixinhao|N_CS       ; padio            ;
+; |zjw_kongzhixinhao|CFE     ; |zjw_kongzhixinhao|CFE        ; padio            ;
+; |zjw_kongzhixinhao|ZFE     ; |zjw_kongzhixinhao|ZFE        ; padio            ;
+; |zjw_kongzhixinhao|MADD[0] ; |zjw_kongzhixinhao|MADD[0]    ; padio            ;
+; |zjw_kongzhixinhao|MADD[1] ; |zjw_kongzhixinhao|MADD[1]    ; padio            ;
+; |zjw_kongzhixinhao|RAA[0]  ; |zjw_kongzhixinhao|RAA[0]     ; padio            ;
+; |zjw_kongzhixinhao|RAA[1]  ; |zjw_kongzhixinhao|RAA[1]     ; padio            ;
+; |zjw_kongzhixinhao|RWBA[0] ; |zjw_kongzhixinhao|RWBA[0]    ; padio            ;
+; |zjw_kongzhixinhao|RWBA[1] ; |zjw_kongzhixinhao|RWBA[1]    ; padio            ;
+; |zjw_kongzhixinhao|SHR     ; |zjw_kongzhixinhao|SHR~corein ; combout          ;
+; |zjw_kongzhixinhao|SHL     ; |zjw_kongzhixinhao|SHL~corein ; combout          ;
+; |zjw_kongzhixinhao|SM      ; |zjw_kongzhixinhao|SM~corein  ; combout          ;
++----------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                      ;
++----------------------------+-------------------------------+------------------+
+; Node Name                  ; Output Port Name              ; Output Port Type ;
++----------------------------+-------------------------------+------------------+
+; |zjw_kongzhixinhao|SME~20  ; |zjw_kongzhixinhao|SME~20     ; combout          ;
+; |zjw_kongzhixinhao|SME~22  ; |zjw_kongzhixinhao|SME~22     ; combout          ;
+; |zjw_kongzhixinhao|SME~16  ; |zjw_kongzhixinhao|SME~16     ; combout          ;
+; |zjw_kongzhixinhao|FRL~6   ; |zjw_kongzhixinhao|FRL~6      ; combout          ;
+; |zjw_kongzhixinhao|FRR~5   ; |zjw_kongzhixinhao|FRR~5      ; combout          ;
+; |zjw_kongzhixinhao|IN_PC~8 ; |zjw_kongzhixinhao|IN_PC~8    ; combout          ;
+; |zjw_kongzhixinhao|CFE~6   ; |zjw_kongzhixinhao|CFE~6      ; combout          ;
+; |zjw_kongzhixinhao|SME     ; |zjw_kongzhixinhao|SME        ; padio            ;
+; |zjw_kongzhixinhao|LD_IR   ; |zjw_kongzhixinhao|LD_IR      ; padio            ;
+; |zjw_kongzhixinhao|DL      ; |zjw_kongzhixinhao|DL         ; padio            ;
+; |zjw_kongzhixinhao|XL      ; |zjw_kongzhixinhao|XL         ; padio            ;
+; |zjw_kongzhixinhao|F       ; |zjw_kongzhixinhao|F          ; padio            ;
+; |zjw_kongzhixinhao|FRL     ; |zjw_kongzhixinhao|FRL        ; padio            ;
+; |zjw_kongzhixinhao|FRR     ; |zjw_kongzhixinhao|FRR        ; padio            ;
+; |zjw_kongzhixinhao|CF      ; |zjw_kongzhixinhao|CF         ; padio            ;
+; |zjw_kongzhixinhao|ZF      ; |zjw_kongzhixinhao|ZF         ; padio            ;
+; |zjw_kongzhixinhao|M       ; |zjw_kongzhixinhao|M          ; padio            ;
+; |zjw_kongzhixinhao|LD_PC   ; |zjw_kongzhixinhao|LD_PC      ; padio            ;
+; |zjw_kongzhixinhao|IN_PC   ; |zjw_kongzhixinhao|IN_PC      ; padio            ;
+; |zjw_kongzhixinhao|N_WE    ; |zjw_kongzhixinhao|N_WE       ; padio            ;
+; |zjw_kongzhixinhao|N_CS    ; |zjw_kongzhixinhao|N_CS       ; padio            ;
+; |zjw_kongzhixinhao|CFE     ; |zjw_kongzhixinhao|CFE        ; padio            ;
+; |zjw_kongzhixinhao|ZFE     ; |zjw_kongzhixinhao|ZFE        ; padio            ;
+; |zjw_kongzhixinhao|MADD[0] ; |zjw_kongzhixinhao|MADD[0]    ; padio            ;
+; |zjw_kongzhixinhao|MADD[1] ; |zjw_kongzhixinhao|MADD[1]    ; padio            ;
+; |zjw_kongzhixinhao|RAA[0]  ; |zjw_kongzhixinhao|RAA[0]     ; padio            ;
+; |zjw_kongzhixinhao|RAA[1]  ; |zjw_kongzhixinhao|RAA[1]     ; padio            ;
+; |zjw_kongzhixinhao|RWBA[0] ; |zjw_kongzhixinhao|RWBA[0]    ; padio            ;
+; |zjw_kongzhixinhao|RWBA[1] ; |zjw_kongzhixinhao|RWBA[1]    ; padio            ;
+; |zjw_kongzhixinhao|SHR     ; |zjw_kongzhixinhao|SHR~corein ; combout          ;
+; |zjw_kongzhixinhao|SHL     ; |zjw_kongzhixinhao|SHL~corein ; combout          ;
+; |zjw_kongzhixinhao|SM      ; |zjw_kongzhixinhao|SM~corein  ; combout          ;
++----------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 05 20:37:55 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off zjw_kongzhixinhao -c zjw_kongzhixinhao
+Info: Using vector source file "C:/Users/apple/Desktop/数电实验二/kongzhixinhao/zjw_kongzhixinhao.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      58.75 %
+Info: Number of transitions in simulation is 2197
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 166 megabytes
+    Info: Processing ended: Tue Nov 05 20:37:56 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

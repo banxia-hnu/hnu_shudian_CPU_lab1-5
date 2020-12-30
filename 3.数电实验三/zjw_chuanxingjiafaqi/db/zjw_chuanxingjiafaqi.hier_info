@@ -1,0 +1,59 @@
+|zjw_chuanxingjiafaqi
+F[0] => quanjiaqi_vhdl:g0.X
+F[1] => quanjiaqi_vhdl:g1.X
+F[2] => quanjiaqi_vhdl:g2.X
+F[3] => quanjiaqi_vhdl:g3.X
+E[0] => quanjiaqi_vhdl:g0.Y
+E[1] => quanjiaqi_vhdl:g1.Y
+E[2] => quanjiaqi_vhdl:g2.Y
+E[3] => quanjiaqi_vhdl:g3.Y
+M4[0] <= quanjiaqi_vhdl:g0.S
+M4[1] <= quanjiaqi_vhdl:g1.S
+M4[2] <= quanjiaqi_vhdl:g2.S
+M4[3] <= quanjiaqi_vhdl:g3.S
+
+
+|zjw_chuanxingjiafaqi|quanjiaqi_vhdl:g0
+X => C~0.IN0
+X => S~0.IN0
+Y => C~0.IN1
+Y => S~0.IN1
+Z => C~1.IN1
+Z => S~1.IN1
+S <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+C <= C~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zjw_chuanxingjiafaqi|quanjiaqi_vhdl:g1
+X => C~0.IN0
+X => S~0.IN0
+Y => C~0.IN1
+Y => S~0.IN1
+Z => C~1.IN1
+Z => S~1.IN1
+S <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+C <= C~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zjw_chuanxingjiafaqi|quanjiaqi_vhdl:g2
+X => C~0.IN0
+X => S~0.IN0
+Y => C~0.IN1
+Y => S~0.IN1
+Z => C~1.IN1
+Z => S~1.IN1
+S <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+C <= C~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zjw_chuanxingjiafaqi|quanjiaqi_vhdl:g3
+X => C~0.IN0
+X => S~0.IN0
+Y => C~0.IN1
+Y => S~0.IN1
+Z => C~1.IN1
+Z => S~1.IN1
+S <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+C <= C~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

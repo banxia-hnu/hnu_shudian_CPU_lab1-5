@@ -1,0 +1,250 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+41
+2965
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+zjw_canshuhua
+# storage
+db|zjw_8_1.(1).cnf
+db|zjw_8_1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+zjw_canshuhua.vhd
+f91d8c046ede05ae7f497f93a372
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+m
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(enable)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+b:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+zjw_canshuhua
+# storage
+db|zjw_8_1.(2).cnf
+db|zjw_8_1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+zjw_canshuhua.vhd
+f91d8c046ede05ae7f497f93a372
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+16
+PARAMETER_SIGNED_DEC
+USR
+m
+2
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in1)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(enable)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+b:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+zjw_canshuhua
+# storage
+db|zjw_8_1.(3).cnf
+db|zjw_8_1.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+zjw_canshuhua.vhd
+f91d8c046ede05ae7f497f93a372
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+m
+1
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(enable)
+0 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+b:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+zjw_8_1
+# storage
+db|zjw_8_1.(0).cnf
+db|zjw_8_1.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+zjw_8_1.vhd
+9c5e247b4c8a3776a6c6aa3b427a56
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+b:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+zjw_canshuhua
+# storage
+db|zjw_8_1.(4).cnf
+db|zjw_8_1.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+zjw_canshuhua.vhd
+f91d8c046ede05ae7f497f93a372
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+6
+PARAMETER_SIGNED_DEC
+USR
+m
+1
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in1)
+5 downto 0
+PARAMETER_STRING
+USR
+ constraint(enable)
+0 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+zjw_canshuhua:g0
+}
+# lmf
+b:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

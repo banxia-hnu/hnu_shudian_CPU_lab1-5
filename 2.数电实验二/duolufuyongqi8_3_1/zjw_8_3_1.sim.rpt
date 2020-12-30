@@ -1,0 +1,217 @@
+Simulator report for zjw_8_3_1
+Wed Nov 13 22:23:12 2019
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 52 nodes     ;
+; Simulation Coverage         ;      92.31 % ;
+; Total Number of Transitions ; 5351         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C4F324C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      92.31 % ;
+; Total nodes checked                                 ; 52           ;
+; Total output ports checked                          ; 52           ;
+; Total output ports with complete 1/0-value coverage ; 48           ;
+; Total output ports with no 1/0-value coverage       ; 4            ;
+; Total output ports with no 1-value coverage         ; 4            ;
+; Total output ports with no 0-value coverage         ; 4            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                      ;
++--------------------+--------------------------+------------------+
+; Node Name          ; Output Port Name         ; Output Port Type ;
++--------------------+--------------------------+------------------+
+; |zjw_8_3_1|out1~24 ; |zjw_8_3_1|out1~24       ; combout          ;
+; |zjw_8_3_1|out1~26 ; |zjw_8_3_1|out1~26       ; combout          ;
+; |zjw_8_3_1|out1~27 ; |zjw_8_3_1|out1~27       ; combout          ;
+; |zjw_8_3_1|out1~28 ; |zjw_8_3_1|out1~28       ; combout          ;
+; |zjw_8_3_1|out1~29 ; |zjw_8_3_1|out1~29       ; combout          ;
+; |zjw_8_3_1|out1~30 ; |zjw_8_3_1|out1~30       ; combout          ;
+; |zjw_8_3_1|out1~31 ; |zjw_8_3_1|out1~31       ; combout          ;
+; |zjw_8_3_1|out1~32 ; |zjw_8_3_1|out1~32       ; combout          ;
+; |zjw_8_3_1|out1~33 ; |zjw_8_3_1|out1~33       ; combout          ;
+; |zjw_8_3_1|out1~34 ; |zjw_8_3_1|out1~34       ; combout          ;
+; |zjw_8_3_1|out1~35 ; |zjw_8_3_1|out1~35       ; combout          ;
+; |zjw_8_3_1|out1~36 ; |zjw_8_3_1|out1~36       ; combout          ;
+; |zjw_8_3_1|out1~37 ; |zjw_8_3_1|out1~37       ; combout          ;
+; |zjw_8_3_1|out1~38 ; |zjw_8_3_1|out1~38       ; combout          ;
+; |zjw_8_3_1|out1~39 ; |zjw_8_3_1|out1~39       ; combout          ;
+; |zjw_8_3_1|out1~40 ; |zjw_8_3_1|out1~40       ; combout          ;
+; |zjw_8_3_1|out1[0] ; |zjw_8_3_1|out1[0]       ; padio            ;
+; |zjw_8_3_1|out1[1] ; |zjw_8_3_1|out1[1]       ; padio            ;
+; |zjw_8_3_1|out1[2] ; |zjw_8_3_1|out1[2]       ; padio            ;
+; |zjw_8_3_1|out1[3] ; |zjw_8_3_1|out1[3]       ; padio            ;
+; |zjw_8_3_1|out1[4] ; |zjw_8_3_1|out1[4]       ; padio            ;
+; |zjw_8_3_1|out1[5] ; |zjw_8_3_1|out1[5]       ; padio            ;
+; |zjw_8_3_1|out1[6] ; |zjw_8_3_1|out1[6]       ; padio            ;
+; |zjw_8_3_1|out1[7] ; |zjw_8_3_1|out1[7]       ; padio            ;
+; |zjw_8_3_1|in0[0]  ; |zjw_8_3_1|in0[0]~corein ; combout          ;
+; |zjw_8_3_1|in1[0]  ; |zjw_8_3_1|in1[0]~corein ; combout          ;
+; |zjw_8_3_1|in2[0]  ; |zjw_8_3_1|in2[0]~corein ; combout          ;
+; |zjw_8_3_1|in0[1]  ; |zjw_8_3_1|in0[1]~corein ; combout          ;
+; |zjw_8_3_1|in1[1]  ; |zjw_8_3_1|in1[1]~corein ; combout          ;
+; |zjw_8_3_1|in2[1]  ; |zjw_8_3_1|in2[1]~corein ; combout          ;
+; |zjw_8_3_1|in0[2]  ; |zjw_8_3_1|in0[2]~corein ; combout          ;
+; |zjw_8_3_1|in1[2]  ; |zjw_8_3_1|in1[2]~corein ; combout          ;
+; |zjw_8_3_1|in2[2]  ; |zjw_8_3_1|in2[2]~corein ; combout          ;
+; |zjw_8_3_1|in0[3]  ; |zjw_8_3_1|in0[3]~corein ; combout          ;
+; |zjw_8_3_1|in1[3]  ; |zjw_8_3_1|in1[3]~corein ; combout          ;
+; |zjw_8_3_1|in2[3]  ; |zjw_8_3_1|in2[3]~corein ; combout          ;
+; |zjw_8_3_1|in0[4]  ; |zjw_8_3_1|in0[4]~corein ; combout          ;
+; |zjw_8_3_1|in1[4]  ; |zjw_8_3_1|in1[4]~corein ; combout          ;
+; |zjw_8_3_1|in2[4]  ; |zjw_8_3_1|in2[4]~corein ; combout          ;
+; |zjw_8_3_1|in0[5]  ; |zjw_8_3_1|in0[5]~corein ; combout          ;
+; |zjw_8_3_1|in1[5]  ; |zjw_8_3_1|in1[5]~corein ; combout          ;
+; |zjw_8_3_1|in2[5]  ; |zjw_8_3_1|in2[5]~corein ; combout          ;
+; |zjw_8_3_1|in0[6]  ; |zjw_8_3_1|in0[6]~corein ; combout          ;
+; |zjw_8_3_1|in1[6]  ; |zjw_8_3_1|in1[6]~corein ; combout          ;
+; |zjw_8_3_1|in2[6]  ; |zjw_8_3_1|in2[6]~corein ; combout          ;
+; |zjw_8_3_1|in0[7]  ; |zjw_8_3_1|in0[7]~corein ; combout          ;
+; |zjw_8_3_1|in1[7]  ; |zjw_8_3_1|in1[7]~corein ; combout          ;
+; |zjw_8_3_1|in2[7]  ; |zjw_8_3_1|in2[7]~corein ; combout          ;
++--------------------+--------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++--------------------+------------------------+------------------+
+; Node Name          ; Output Port Name       ; Output Port Type ;
++--------------------+------------------------+------------------+
+; |zjw_8_3_1|out1~25 ; |zjw_8_3_1|out1~25     ; combout          ;
+; |zjw_8_3_1|MOVC    ; |zjw_8_3_1|MOVC~corein ; combout          ;
+; |zjw_8_3_1|JUMP    ; |zjw_8_3_1|JUMP~corein ; combout          ;
+; |zjw_8_3_1|MOVB    ; |zjw_8_3_1|MOVB~corein ; combout          ;
++--------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++--------------------+------------------------+------------------+
+; Node Name          ; Output Port Name       ; Output Port Type ;
++--------------------+------------------------+------------------+
+; |zjw_8_3_1|out1~25 ; |zjw_8_3_1|out1~25     ; combout          ;
+; |zjw_8_3_1|MOVC    ; |zjw_8_3_1|MOVC~corein ; combout          ;
+; |zjw_8_3_1|JUMP    ; |zjw_8_3_1|JUMP~corein ; combout          ;
+; |zjw_8_3_1|MOVB    ; |zjw_8_3_1|MOVB~corein ; combout          ;
++--------------------+------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 13 22:23:11 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off zjw_8_3_1 -c zjw_8_3_1
+Info: Using vector source file "C:/Users/apple/Desktop/数电实验二/duolufuyongqi8_3_1/zjw_8_3_1.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      92.31 %
+Info: Number of transitions in simulation is 5351
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 166 megabytes
+    Info: Processing ended: Wed Nov 13 22:23:12 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,21 @@
+set_global_assignment -name IP_TOOL_NAME "RAM: 1-PORT"
+set_global_assignment -name IP_TOOL_VERSION "9.0"
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "RAM1P.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "RAM1P_bb.v"]
+module TEST(
+    input     [6:0]  address,
+    input                clock,
+    input     [7:0]  data,
+    input                wren,
+    output [7:0]   q
+);
+
+RAM1P    RAM1P_inst (
+    .address ( address ),
+    .clock ( clock ),
+    .data ( data ),
+    .wren ( wren ),
+    .q ( q )
+    );
+
+endmodule

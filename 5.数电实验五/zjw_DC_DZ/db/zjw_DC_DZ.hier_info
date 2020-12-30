@@ -1,0 +1,13 @@
+|zjw_DC_DZ
+C => X.DATAIN
+Z => Y.DATAIN
+JZ => ~NO_FANOUT~
+JC => ~NO_FANOUT~
+SM => Y.ENA
+SM => X.ENA
+clk => X.CLK
+clk => Y.CLK
+DC <= X.DB_MAX_OUTPUT_PORT_TYPE
+DZ <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,494 @@
+Simulator report for zjw_SM
+Thu Dec 05 18:36:11 2019
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 4 nodes      ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 1329         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C20F400C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 4            ;
+; Total output ports checked                          ; 3            ;
+; Total output ports with complete 1/0-value coverage ; 3            ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------+
+; Complete 1/0-Value Coverage                         ;
++-------------+--------------------+------------------+
+; Node Name   ; Output Port Name   ; Output Port Type ;
++-------------+--------------------+------------------+
+; |zjw_SM|SM  ; |zjw_SM|SM         ; padio            ;
+; |zjw_SM|EN  ; |zjw_SM|EN~corein  ; combout          ;
+; |zjw_SM|clk ; |zjw_SM|clk~corein ; combout          ;
++-------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Dec 05 18:36:10 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off zjw_SM -c zjw_SM
+Info: Using vector source file "C:/Users/apple/Desktop/数电实验四/zjw_SM/zjw_SM.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock high time violation at 6.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 9.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 12.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 15.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 18.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 21.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 24.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 27.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 30.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 33.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 36.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 39.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 42.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 45.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 48.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 51.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 54.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 57.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 60.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 63.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 66.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 69.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 72.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 75.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 78.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 81.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 84.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 87.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 90.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 93.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 96.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 99.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 102.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 105.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 108.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 111.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 114.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 117.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 120.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 123.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 126.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 129.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 132.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 135.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 138.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 141.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 144.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 147.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 150.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 153.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 156.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 159.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 162.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 165.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 168.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 171.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 174.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 177.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 180.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 183.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 186.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 189.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 192.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 195.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 198.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 201.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 204.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 207.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 210.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 213.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 216.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 219.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 222.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 225.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 228.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 231.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 234.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 237.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 240.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 243.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 246.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 249.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 252.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 255.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 258.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 261.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 264.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 267.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 270.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 273.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 276.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 279.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 282.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 285.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 288.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 291.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 294.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 297.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 300.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 303.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 306.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 309.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 312.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 315.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 318.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 321.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 324.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 327.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 330.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 333.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 336.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 339.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 342.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 345.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 348.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 351.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 354.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 357.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 360.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 363.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 366.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 369.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 372.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 375.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 378.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 381.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 384.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 387.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 390.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 393.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 396.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 399.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 402.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 405.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 408.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 411.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 414.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 417.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 420.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 423.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 426.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 429.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 432.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 435.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 438.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 441.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 444.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 447.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 450.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 453.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 456.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 459.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 462.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 465.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 468.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 471.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 474.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 477.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 480.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 483.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 486.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 489.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 492.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 495.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 498.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 501.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 504.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 507.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 510.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 513.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 516.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 519.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 522.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 525.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 528.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 531.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 534.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 537.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 540.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 543.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 546.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 549.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 552.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 555.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 558.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 561.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 564.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 567.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 570.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 573.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 576.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 579.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 582.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 585.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 588.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 591.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 594.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 597.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 600.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 603.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 606.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 609.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 612.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 615.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 618.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 621.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 624.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 627.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 630.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 633.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 636.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 639.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 642.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 645.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 648.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 651.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 654.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 657.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 660.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 663.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 666.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 669.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 672.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 675.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 678.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 681.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 684.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 687.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 690.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 693.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 696.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 699.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 702.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 705.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 708.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 711.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 714.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 717.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 720.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 723.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 726.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 729.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 732.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 735.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 738.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 741.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 744.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 747.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 750.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 753.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 756.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 759.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 762.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 765.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 768.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 771.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 774.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 777.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 780.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 783.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 786.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 789.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 792.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 795.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 798.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 801.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 804.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 807.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 810.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 813.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 816.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 819.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 822.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 825.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 828.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 831.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 834.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 837.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 840.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 843.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 846.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 849.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 852.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 855.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 858.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 861.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 864.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 867.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 870.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 873.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 876.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 879.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 882.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 885.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 888.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 891.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 894.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 897.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 900.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 903.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 906.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 909.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 912.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 915.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 918.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 921.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 924.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 927.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 930.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 933.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 936.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 939.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 942.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 945.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 948.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 951.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 954.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 957.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 960.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 963.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 966.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 969.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 972.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 975.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 978.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 981.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 984.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 987.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 990.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 993.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 996.8 ns on register "|zjw_SM|d"
+Warning: Found clock high time violation at 999.8 ns on register "|zjw_SM|d"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 1329
+Info: Quartus II Simulator was successful. 0 errors, 332 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Thu Dec 05 18:36:11 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

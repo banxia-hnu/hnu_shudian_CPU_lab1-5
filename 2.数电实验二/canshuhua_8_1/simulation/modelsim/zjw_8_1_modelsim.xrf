@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/apple/Desktop/数电实验二/canshuhua_8_1/zjw_canshuhua.vhd
+source_file = 1, C:/Users/apple/Desktop/数电实验二/canshuhua_8_1/zjw_8_1.vhd
+source_file = 1, C:/Users/apple/Desktop/数电实验二/canshuhua_8_1/zjw_8_1.vwf
+source_file = 1, C:/Users/apple/Desktop/数电实验二/canshuhua_8_1/Block1.bdf
+source_file = 1, C:/Users/apple/Desktop/数电实验二/canshuhua_8_1/Waveform1.vwf
+source_file = 1, C:/Users/apple/Desktop/数电实验二/canshuhua_8_1/db/zjw_8_1.cbx.xml
+design_name = zjw_8_1
+instance = comp, \enable[0]~I\, enable[0], zjw_8_1, 1
+instance = comp, \in1[0]~I\, in1[0], zjw_8_1, 1
+instance = comp, \in1[1]~I\, in1[1], zjw_8_1, 1
+instance = comp, \g0|out1~1\, g0|out1~1, zjw_8_1, 1
+instance = comp, \in1[2]~I\, in1[2], zjw_8_1, 1
+instance = comp, \in1[3]~I\, in1[3], zjw_8_1, 1
+instance = comp, \in1[4]~I\, in1[4], zjw_8_1, 1
+instance = comp, \in1[5]~I\, in1[5], zjw_8_1, 1
+instance = comp, \out1~I\, out1, zjw_8_1, 1

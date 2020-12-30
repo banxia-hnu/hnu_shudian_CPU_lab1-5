@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.074 ns
+From           : XL
+To             : lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_rl91:auto_generated|ram_block1a7~porta_we_reg
+From Clock     : --
+To Clock       : inclock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.438 ns
+From           : lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_rl91:auto_generated|ram_block1a7~porta_address_reg7
+To             : dio[1]
+From Clock     : inclock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.918 ns
+From           : XL
+To             : dio[6]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.489 ns
+From           : address[2]
+To             : lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_rl91:auto_generated|ram_block1a7~porta_address_reg2
+From Clock     : --
+To Clock       : inclock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'inclock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 197.01 MHz ( period = 5.076 ns )
+From           : lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_rl91:auto_generated|ram_block1a7~porta_datain_reg7
+To             : lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_rl91:auto_generated|ram_block1a7~porta_memory_reg7
+From Clock     : inclock
+To Clock       : inclock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

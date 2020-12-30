@@ -1,0 +1,22 @@
+|zjw_8_1
+in1[0] => zjw_canshuhua:g0.in1[0]
+in1[1] => zjw_canshuhua:g0.in1[1]
+in1[2] => zjw_canshuhua:g0.in1[2]
+in1[3] => zjw_canshuhua:g0.in1[3]
+in1[4] => zjw_canshuhua:g0.in1[4]
+in1[5] => zjw_canshuhua:g0.in1[5]
+enable[0] => zjw_canshuhua:g0.enable[0]
+out1 <= zjw_canshuhua:g0.out1
+
+
+|zjw_8_1|zjw_canshuhua:g0
+in1[0] => out1~0.DATAA
+in1[1] => out1~0.DATAB
+in1[2] => ~NO_FANOUT~
+in1[3] => ~NO_FANOUT~
+in1[4] => ~NO_FANOUT~
+in1[5] => ~NO_FANOUT~
+enable[0] => out1~0.OUTPUTSELECT
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

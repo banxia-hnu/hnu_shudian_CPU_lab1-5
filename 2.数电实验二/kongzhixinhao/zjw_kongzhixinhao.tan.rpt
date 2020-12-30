@@ -1,0 +1,872 @@
+Classic Timing Analyzer report for zjw_kongzhixinhao
+Mon Nov 04 21:02:45 2019
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                            ;
++------------------------------+-------+---------------+-------------+-----------+------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From      ; To         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-----------+------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.136 ns    ; IR[4]     ; ZFE$latch  ; --         ; SM       ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 19.784 ns   ; ZFE$latch ; ZFE        ; NOT0       ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 9.840 ns    ; IR[7]     ; S[3]       ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 9.611 ns    ; SHL       ; N_WE$latch ; --         ; NOT0     ; 0            ;
+; Total number of failed paths ;       ;               ;             ;           ;            ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+-----------+------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP1C4F324C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; HALT            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SM              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; C               ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; JZ              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; Z               ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; JC              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SHL             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NOT0            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SHR             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; MOVA            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; MOVC            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; MOVB            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; ALU             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; JMP             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NOP             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                           ;
++-----------------------------------------+-----------------------------------------------------+------------+-------+---------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From  ; To            ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+-------+---------------+----------+
+; N/A                                     ; None                                                ; 4.136 ns   ; IR[4] ; ZFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 3.890 ns   ; IR[4] ; ZFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 3.801 ns   ; IR[4] ; CFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 3.555 ns   ; IR[4] ; CFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 3.532 ns   ; NOT0  ; FRR$latch     ; SM       ;
+; N/A                                     ; None                                                ; 3.418 ns   ; NOP   ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 3.286 ns   ; NOT0  ; FRR$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 3.172 ns   ; NOP   ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 3.106 ns   ; IR[6] ; ZFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.952 ns   ; IR[5] ; ZFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.932 ns   ; NOT0  ; FRL$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.860 ns   ; IR[6] ; ZFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 2.835 ns   ; IR[4] ; M$latch       ; SM       ;
+; N/A                                     ; None                                                ; 2.768 ns   ; IR[6] ; CFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.706 ns   ; IR[5] ; ZFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 2.697 ns   ; NOT0  ; N_WE$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 2.686 ns   ; NOT0  ; FRL$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 2.651 ns   ; MOVC  ; DL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 2.640 ns   ; NOT0  ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.589 ns   ; IR[4] ; M$latch       ; HALT     ;
+; N/A                                     ; None                                                ; 2.558 ns   ; IR[7] ; ZFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.522 ns   ; IR[6] ; CFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 2.498 ns   ; NOP   ; IN_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 2.446 ns   ; NOT0  ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 2.394 ns   ; NOT0  ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 2.354 ns   ; IR[4] ; ZFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 2.312 ns   ; IR[7] ; ZFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 2.225 ns   ; IR[7] ; CFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 2.217 ns   ; IR[2] ; RWBA[0]$latch ; SM       ;
+; N/A                                     ; None                                                ; 2.132 ns   ; MOVA  ; RWBA[0]$latch ; SM       ;
+; N/A                                     ; None                                                ; 2.124 ns   ; MOVB  ; RWBA[0]$latch ; SM       ;
+; N/A                                     ; None                                                ; 2.019 ns   ; IR[4] ; CFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 1.981 ns   ; IR[4] ; ZFE$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 1.979 ns   ; IR[7] ; CFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 1.971 ns   ; IR[2] ; RWBA[0]$latch ; HALT     ;
+; N/A                                     ; None                                                ; 1.921 ns   ; NOP   ; LD_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 1.911 ns   ; NOT0  ; F$latch       ; SM       ;
+; N/A                                     ; None                                                ; 1.886 ns   ; MOVA  ; RWBA[0]$latch ; HALT     ;
+; N/A                                     ; None                                                ; 1.878 ns   ; MOVB  ; RWBA[0]$latch ; HALT     ;
+; N/A                                     ; None                                                ; 1.801 ns   ; MOVA  ; DL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 1.794 ns   ; IR[6] ; M$latch       ; SM       ;
+; N/A                                     ; None                                                ; 1.764 ns   ; ALU   ; FRR$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.753 ns   ; IR[4] ; ZFE$latch     ; JC       ;
+; N/A                                     ; None                                                ; 1.750 ns   ; NOT0  ; FRR$latch     ; Z        ;
+; N/A                                     ; None                                                ; 1.719 ns   ; NOT0  ; IN_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 1.702 ns   ; MOVB  ; DL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 1.683 ns   ; NOT0  ; DL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 1.681 ns   ; MOVB  ; N_WE$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 1.665 ns   ; NOT0  ; F$latch       ; HALT     ;
+; N/A                                     ; None                                                ; 1.647 ns   ; IR[5] ; M$latch       ; SM       ;
+; N/A                                     ; None                                                ; 1.646 ns   ; IR[4] ; CFE$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 1.636 ns   ; NOP   ; SME$latch     ; Z        ;
+; N/A                                     ; None                                                ; 1.633 ns   ; IR[4] ; ZFE$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 1.576 ns   ; IR[4] ; ZFE$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 1.548 ns   ; IR[6] ; M$latch       ; HALT     ;
+; N/A                                     ; None                                                ; 1.518 ns   ; ALU   ; FRR$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 1.484 ns   ; IR[4] ; ZFE$latch     ; C        ;
+; N/A                                     ; None                                                ; 1.451 ns   ; IR[4] ; ZFE$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 1.418 ns   ; IR[4] ; CFE$latch     ; JC       ;
+; N/A                                     ; None                                                ; 1.415 ns   ; MOVA  ; N_WE$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 1.401 ns   ; IR[5] ; M$latch       ; HALT     ;
+; N/A                                     ; None                                                ; 1.377 ns   ; NOT0  ; FRR$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 1.324 ns   ; IR[6] ; ZFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 1.298 ns   ; IR[4] ; CFE$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 1.288 ns   ; MOVB  ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.263 ns   ; NOP   ; SME$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 1.255 ns   ; IR[7] ; M$latch       ; SM       ;
+; N/A                                     ; None                                                ; 1.241 ns   ; IR[4] ; CFE$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 1.224 ns   ; MOVC  ; MADD[0]$latch ; HALT     ;
+; N/A                                     ; None                                                ; 1.205 ns   ; MOVB  ; XL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 1.190 ns   ; MOVC  ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.189 ns   ; SHL   ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.170 ns   ; IR[5] ; ZFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 1.164 ns   ; ALU   ; FRL$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.159 ns   ; NOT0  ; N_WE$latch    ; Z        ;
+; N/A                                     ; None                                                ; 1.150 ns   ; NOT0  ; FRL$latch     ; Z        ;
+; N/A                                     ; None                                                ; 1.149 ns   ; NOT0  ; FRR$latch     ; JC       ;
+; N/A                                     ; None                                                ; 1.149 ns   ; IR[4] ; CFE$latch     ; C        ;
+; N/A                                     ; None                                                ; 1.143 ns   ; NOT0  ; LD_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 1.142 ns   ; ALU   ; CFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.134 ns   ; MOVA  ; MADD[0]$latch ; HALT     ;
+; N/A                                     ; None                                                ; 1.116 ns   ; IR[4] ; CFE$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 1.115 ns   ; MOVB  ; MADD[0]$latch ; HALT     ;
+; N/A                                     ; None                                                ; 1.115 ns   ; SHR   ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 1.113 ns   ; MOVC  ; DL$latch      ; Z        ;
+; N/A                                     ; None                                                ; 1.094 ns   ; MOVB  ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 1.053 ns   ; IR[4] ; M$latch       ; Z        ;
+; N/A                                     ; None                                                ; 1.042 ns   ; MOVB  ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 1.035 ns   ; NOP   ; SME$latch     ; JC       ;
+; N/A                                     ; None                                                ; 1.029 ns   ; NOT0  ; FRR$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 1.025 ns   ; ALU   ; M$latch       ; SM       ;
+; N/A                                     ; None                                                ; 1.009 ns   ; IR[7] ; M$latch       ; HALT     ;
+; N/A                                     ; None                                                ; 0.996 ns   ; MOVC  ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.995 ns   ; SHL   ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.986 ns   ; IR[6] ; CFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 0.972 ns   ; NOT0  ; FRR$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 0.960 ns   ; NOP   ; IN_PC$latch   ; Z        ;
+; N/A                                     ; None                                                ; 0.951 ns   ; IR[6] ; ZFE$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 0.944 ns   ; MOVC  ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.943 ns   ; SHL   ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.939 ns   ; MOVA  ; XL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 0.929 ns   ; ALU   ; N_WE$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.921 ns   ; SHR   ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.918 ns   ; ALU   ; FRL$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.917 ns   ; IR[1] ; RAA[1]$latch  ; SM       ;
+; N/A                                     ; None                                                ; 0.915 ns   ; NOP   ; SME$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 0.908 ns   ; NOT0  ; N_CS$latch    ; Z        ;
+; N/A                                     ; None                                                ; 0.896 ns   ; ALU   ; CFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.880 ns   ; NOT0  ; FRR$latch     ; C        ;
+; N/A                                     ; None                                                ; 0.869 ns   ; SHR   ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.858 ns   ; NOP   ; SME$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 0.858 ns   ; NOT0  ; SME$latch     ; Z        ;
+; N/A                                     ; None                                                ; 0.847 ns   ; NOT0  ; FRR$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 0.818 ns   ; ALU   ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.797 ns   ; IR[5] ; ZFE$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 0.786 ns   ; NOT0  ; N_WE$latch    ; JMP      ;
+; N/A                                     ; None                                                ; 0.784 ns   ; IR[5] ; CFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 0.779 ns   ; ALU   ; M$latch       ; HALT     ;
+; N/A                                     ; None                                                ; 0.777 ns   ; NOT0  ; FRL$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 0.776 ns   ; IR[7] ; ZFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 0.766 ns   ; NOP   ; SME$latch     ; C        ;
+; N/A                                     ; None                                                ; 0.747 ns   ; MOVB  ; RAA[0]$latch  ; SM       ;
+; N/A                                     ; None                                                ; 0.745 ns   ; IR[0] ; RAA[0]$latch  ; SM       ;
+; N/A                                     ; None                                                ; 0.740 ns   ; MOVC  ; DL$latch      ; JMP      ;
+; N/A                                     ; None                                                ; 0.733 ns   ; NOP   ; SME$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 0.723 ns   ; IR[6] ; ZFE$latch     ; JC       ;
+; N/A                                     ; None                                                ; 0.680 ns   ; IR[4] ; M$latch       ; JMP      ;
+; N/A                                     ; None                                                ; 0.671 ns   ; IR[1] ; RAA[1]$latch  ; HALT     ;
+; N/A                                     ; None                                                ; 0.613 ns   ; IR[6] ; CFE$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 0.603 ns   ; IR[6] ; ZFE$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 0.587 ns   ; NOP   ; IN_PC$latch   ; JMP      ;
+; N/A                                     ; None                                                ; 0.569 ns   ; MOVA  ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 0.569 ns   ; IR[5] ; ZFE$latch     ; JC       ;
+; N/A                                     ; None                                                ; 0.558 ns   ; NOT0  ; N_WE$latch    ; JC       ;
+; N/A                                     ; None                                                ; 0.549 ns   ; NOT0  ; FRL$latch     ; JC       ;
+; N/A                                     ; None                                                ; 0.546 ns   ; IR[6] ; ZFE$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 0.538 ns   ; IR[5] ; CFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.535 ns   ; NOT0  ; N_CS$latch    ; JMP      ;
+; N/A                                     ; None                                                ; 0.526 ns   ; MOVC  ; RAA[0]$latch  ; SM       ;
+; N/A                                     ; None                                                ; 0.512 ns   ; MOVC  ; DL$latch      ; JC       ;
+; N/A                                     ; None                                                ; 0.508 ns   ; ALU   ; ZFE$latch     ; SM       ;
+; N/A                                     ; None                                                ; 0.501 ns   ; MOVB  ; RAA[0]$latch  ; HALT     ;
+; N/A                                     ; None                                                ; 0.499 ns   ; IR[0] ; RAA[0]$latch  ; HALT     ;
+; N/A                                     ; None                                                ; 0.485 ns   ; NOT0  ; SME$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 0.454 ns   ; IR[6] ; ZFE$latch     ; C        ;
+; N/A                                     ; None                                                ; 0.452 ns   ; IR[4] ; M$latch       ; JC       ;
+; N/A                                     ; None                                                ; 0.449 ns   ; IR[5] ; ZFE$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 0.443 ns   ; IR[7] ; CFE$latch     ; Z        ;
+; N/A                                     ; None                                                ; 0.439 ns   ; MOVA  ; RAA[0]$latch  ; SM       ;
+; N/A                                     ; None                                                ; 0.438 ns   ; NOT0  ; N_WE$latch    ; ALU      ;
+; N/A                                     ; None                                                ; 0.435 ns   ; IR[2] ; RWBA[0]$latch ; Z        ;
+; N/A                                     ; None                                                ; 0.429 ns   ; NOT0  ; FRL$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 0.421 ns   ; IR[6] ; ZFE$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 0.410 ns   ; IR[4] ; ZFE$latch     ; MOVA     ;
+; N/A                                     ; None                                                ; 0.403 ns   ; IR[7] ; ZFE$latch     ; JMP      ;
+; N/A                                     ; None                                                ; 0.392 ns   ; MOVC  ; DL$latch      ; ALU      ;
+; N/A                                     ; None                                                ; 0.392 ns   ; IR[5] ; ZFE$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 0.385 ns   ; IR[6] ; CFE$latch     ; JC       ;
+; N/A                                     ; None                                                ; 0.383 ns   ; NOP   ; LD_PC$latch   ; Z        ;
+; N/A                                     ; None                                                ; 0.381 ns   ; NOT0  ; N_WE$latch    ; JZ       ;
+; N/A                                     ; None                                                ; 0.375 ns   ; MOVA  ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.372 ns   ; NOT0  ; FRL$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 0.367 ns   ; MOVB  ; IN_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 0.359 ns   ; NOP   ; IN_PC$latch   ; JC       ;
+; N/A                                     ; None                                                ; 0.350 ns   ; MOVA  ; RWBA[0]$latch ; Z        ;
+; N/A                                     ; None                                                ; 0.347 ns   ; MOVC  ; RAA[1]$latch  ; SM       ;
+; N/A                                     ; None                                                ; 0.342 ns   ; MOVB  ; RWBA[0]$latch ; Z        ;
+; N/A                                     ; None                                                ; 0.335 ns   ; MOVC  ; DL$latch      ; JZ       ;
+; N/A                                     ; None                                                ; 0.332 ns   ; IR[4] ; M$latch       ; ALU      ;
+; N/A                                     ; None                                                ; 0.331 ns   ; JZ    ; N_CS$latch    ; HALT     ;
+; N/A                                     ; None                                                ; 0.323 ns   ; MOVA  ; SME$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.310 ns   ; NOT0  ; M$latch       ; SM       ;
+; N/A                                     ; None                                                ; 0.307 ns   ; NOT0  ; N_CS$latch    ; JC       ;
+; N/A                                     ; None                                                ; 0.300 ns   ; IR[5] ; ZFE$latch     ; C        ;
+; N/A                                     ; None                                                ; 0.289 ns   ; NOT0  ; N_WE$latch    ; C        ;
+; N/A                                     ; None                                                ; 0.280 ns   ; MOVC  ; RAA[0]$latch  ; HALT     ;
+; N/A                                     ; None                                                ; 0.280 ns   ; NOT0  ; FRL$latch     ; C        ;
+; N/A                                     ; None                                                ; 0.275 ns   ; IR[4] ; M$latch       ; JZ       ;
+; N/A                                     ; None                                                ; 0.269 ns   ; MOVC  ; IN_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 0.268 ns   ; SHL   ; IN_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 0.267 ns   ; IR[5] ; ZFE$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 0.265 ns   ; IR[6] ; CFE$latch     ; ALU      ;
+; N/A                                     ; None                                                ; 0.263 ns   ; MOVA  ; DL$latch      ; Z        ;
+; N/A                                     ; None                                                ; 0.262 ns   ; ALU   ; ZFE$latch     ; HALT     ;
+; N/A                                     ; None                                                ; 0.257 ns   ; NOT0  ; SME$latch     ; JC       ;
+; N/A                                     ; None                                                ; 0.256 ns   ; NOT0  ; N_WE$latch    ; NOP      ;
+; N/A                                     ; None                                                ; 0.247 ns   ; NOT0  ; FRL$latch     ; NOP      ;
+; N/A                                     ; None                                                ; 0.243 ns   ; MOVC  ; DL$latch      ; C        ;
+; N/A                                     ; None                                                ; 0.239 ns   ; NOP   ; IN_PC$latch   ; ALU      ;
+; N/A                                     ; None                                                ; 0.238 ns   ; JZ    ; SME$latch     ; SM       ;
+; N/A                                     ; None                                                ; 0.232 ns   ; SHL   ; DL$latch      ; HALT     ;
+; N/A                                     ; None                                                ; 0.210 ns   ; MOVC  ; DL$latch      ; NOP      ;
+; N/A                                     ; None                                                ; 0.208 ns   ; IR[6] ; CFE$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 0.206 ns   ; IR[3] ; RWBA[1]$latch ; SM       ;
+; N/A                                     ; None                                                ; 0.194 ns   ; SHR   ; IN_PC$latch   ; HALT     ;
+; N/A                                     ; None                                                ; 0.193 ns   ; MOVA  ; RAA[0]$latch  ; HALT     ;
+; N/A                                     ; None                                                ; 0.187 ns   ; NOT0  ; N_CS$latch    ; ALU      ;
+; N/A                                     ; None                                                ; 0.183 ns   ; IR[4] ; M$latch       ; C        ;
+; N/A                                     ; None                                                ; 0.182 ns   ; NOP   ; IN_PC$latch   ; JZ       ;
+; N/A                                     ; None                                                ; 0.181 ns   ; NOT0  ; IN_PC$latch   ; Z        ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;       ;               ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+-------+---------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+------------+---------------+---------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From          ; To      ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+---------------+---------+------------+
+; N/A                                     ; None                                                ; 19.784 ns  ; ZFE$latch     ; ZFE     ; NOT0       ;
+; N/A                                     ; None                                                ; 19.623 ns  ; LD_PC$latch   ; LD_PC   ; NOT0       ;
+; N/A                                     ; None                                                ; 19.331 ns  ; RWBA[0]$latch ; RWBA[0] ; NOT0       ;
+; N/A                                     ; None                                                ; 18.808 ns  ; M$latch       ; M       ; NOT0       ;
+; N/A                                     ; None                                                ; 18.552 ns  ; F$latch       ; F       ; NOT0       ;
+; N/A                                     ; None                                                ; 18.432 ns  ; ZFE$latch     ; ZFE     ; MOVB       ;
+; N/A                                     ; None                                                ; 18.392 ns  ; CFE$latch     ; CFE     ; NOT0       ;
+; N/A                                     ; None                                                ; 18.360 ns  ; N_WE$latch    ; N_WE    ; NOT0       ;
+; N/A                                     ; None                                                ; 18.334 ns  ; ZFE$latch     ; ZFE     ; MOVC       ;
+; N/A                                     ; None                                                ; 18.333 ns  ; ZFE$latch     ; ZFE     ; SHL        ;
+; N/A                                     ; None                                                ; 18.304 ns  ; N_CS$latch    ; N_CS    ; NOT0       ;
+; N/A                                     ; None                                                ; 18.271 ns  ; LD_PC$latch   ; LD_PC   ; MOVB       ;
+; N/A                                     ; None                                                ; 18.259 ns  ; ZFE$latch     ; ZFE     ; SHR        ;
+; N/A                                     ; None                                                ; 18.251 ns  ; FRR$latch     ; FRR     ; NOT0       ;
+; N/A                                     ; None                                                ; 18.173 ns  ; LD_PC$latch   ; LD_PC   ; MOVC       ;
+; N/A                                     ; None                                                ; 18.172 ns  ; LD_PC$latch   ; LD_PC   ; SHL        ;
+; N/A                                     ; None                                                ; 18.154 ns  ; DL$latch      ; DL      ; NOT0       ;
+; N/A                                     ; None                                                ; 18.098 ns  ; LD_PC$latch   ; LD_PC   ; SHR        ;
+; N/A                                     ; None                                                ; 18.064 ns  ; XL$latch      ; MADD[1] ; NOT0       ;
+; N/A                                     ; None                                                ; 18.064 ns  ; XL$latch      ; XL      ; NOT0       ;
+; N/A                                     ; None                                                ; 18.028 ns  ; RWBA[1]$latch ; RWBA[1] ; NOT0       ;
+; N/A                                     ; None                                                ; 17.984 ns  ; IN_PC$latch   ; IN_PC   ; NOT0       ;
+; N/A                                     ; None                                                ; 17.979 ns  ; RWBA[0]$latch ; RWBA[0] ; MOVB       ;
+; N/A                                     ; None                                                ; 17.969 ns  ; SME$latch     ; SME     ; NOT0       ;
+; N/A                                     ; None                                                ; 17.913 ns  ; MADD[0]$latch ; MADD[0] ; NOT0       ;
+; N/A                                     ; None                                                ; 17.897 ns  ; FRL$latch     ; FRL     ; NOT0       ;
+; N/A                                     ; None                                                ; 17.881 ns  ; RWBA[0]$latch ; RWBA[0] ; MOVC       ;
+; N/A                                     ; None                                                ; 17.880 ns  ; RWBA[0]$latch ; RWBA[0] ; SHL        ;
+; N/A                                     ; None                                                ; 17.806 ns  ; RWBA[0]$latch ; RWBA[0] ; SHR        ;
+; N/A                                     ; None                                                ; 17.782 ns  ; RAA[0]$latch  ; RAA[0]  ; NOT0       ;
+; N/A                                     ; None                                                ; 17.767 ns  ; RAA[1]$latch  ; RAA[1]  ; NOT0       ;
+; N/A                                     ; None                                                ; 17.713 ns  ; ZFE$latch     ; ZFE     ; MOVA       ;
+; N/A                                     ; None                                                ; 17.669 ns  ; ZFE$latch     ; ZFE     ; JZ         ;
+; N/A                                     ; None                                                ; 17.552 ns  ; LD_PC$latch   ; LD_PC   ; MOVA       ;
+; N/A                                     ; None                                                ; 17.508 ns  ; LD_PC$latch   ; LD_PC   ; JZ         ;
+; N/A                                     ; None                                                ; 17.456 ns  ; M$latch       ; M       ; MOVB       ;
+; N/A                                     ; None                                                ; 17.358 ns  ; M$latch       ; M       ; MOVC       ;
+; N/A                                     ; None                                                ; 17.357 ns  ; M$latch       ; M       ; SHL        ;
+; N/A                                     ; None                                                ; 17.283 ns  ; M$latch       ; M       ; SHR        ;
+; N/A                                     ; None                                                ; 17.260 ns  ; RWBA[0]$latch ; RWBA[0] ; MOVA       ;
+; N/A                                     ; None                                                ; 17.216 ns  ; RWBA[0]$latch ; RWBA[0] ; JZ         ;
+; N/A                                     ; None                                                ; 17.200 ns  ; F$latch       ; F       ; MOVB       ;
+; N/A                                     ; None                                                ; 17.102 ns  ; F$latch       ; F       ; MOVC       ;
+; N/A                                     ; None                                                ; 17.101 ns  ; F$latch       ; F       ; SHL        ;
+; N/A                                     ; None                                                ; 17.040 ns  ; CFE$latch     ; CFE     ; MOVB       ;
+; N/A                                     ; None                                                ; 17.027 ns  ; F$latch       ; F       ; SHR        ;
+; N/A                                     ; None                                                ; 17.026 ns  ; ZFE$latch     ; ZFE     ; C          ;
+; N/A                                     ; None                                                ; 17.008 ns  ; N_WE$latch    ; N_WE    ; MOVB       ;
+; N/A                                     ; None                                                ; 16.952 ns  ; N_CS$latch    ; N_CS    ; MOVB       ;
+; N/A                                     ; None                                                ; 16.942 ns  ; CFE$latch     ; CFE     ; MOVC       ;
+; N/A                                     ; None                                                ; 16.941 ns  ; CFE$latch     ; CFE     ; SHL        ;
+; N/A                                     ; None                                                ; 16.910 ns  ; N_WE$latch    ; N_WE    ; MOVC       ;
+; N/A                                     ; None                                                ; 16.909 ns  ; N_WE$latch    ; N_WE    ; SHL        ;
+; N/A                                     ; None                                                ; 16.899 ns  ; FRR$latch     ; FRR     ; MOVB       ;
+; N/A                                     ; None                                                ; 16.867 ns  ; CFE$latch     ; CFE     ; SHR        ;
+; N/A                                     ; None                                                ; 16.865 ns  ; LD_PC$latch   ; LD_PC   ; C          ;
+; N/A                                     ; None                                                ; 16.854 ns  ; N_CS$latch    ; N_CS    ; MOVC       ;
+; N/A                                     ; None                                                ; 16.853 ns  ; N_CS$latch    ; N_CS    ; SHL        ;
+; N/A                                     ; None                                                ; 16.835 ns  ; N_WE$latch    ; N_WE    ; SHR        ;
+; N/A                                     ; None                                                ; 16.802 ns  ; DL$latch      ; DL      ; MOVB       ;
+; N/A                                     ; None                                                ; 16.801 ns  ; FRR$latch     ; FRR     ; MOVC       ;
+; N/A                                     ; None                                                ; 16.800 ns  ; FRR$latch     ; FRR     ; SHL        ;
+; N/A                                     ; None                                                ; 16.779 ns  ; N_CS$latch    ; N_CS    ; SHR        ;
+; N/A                                     ; None                                                ; 16.759 ns  ; ZFE$latch     ; ZFE     ; JC         ;
+; N/A                                     ; None                                                ; 16.737 ns  ; M$latch       ; M       ; MOVA       ;
+; N/A                                     ; None                                                ; 16.726 ns  ; FRR$latch     ; FRR     ; SHR        ;
+; N/A                                     ; None                                                ; 16.712 ns  ; XL$latch      ; MADD[1] ; MOVB       ;
+; N/A                                     ; None                                                ; 16.712 ns  ; XL$latch      ; XL      ; MOVB       ;
+; N/A                                     ; None                                                ; 16.704 ns  ; DL$latch      ; DL      ; MOVC       ;
+; N/A                                     ; None                                                ; 16.703 ns  ; DL$latch      ; DL      ; SHL        ;
+; N/A                                     ; None                                                ; 16.693 ns  ; M$latch       ; M       ; JZ         ;
+; N/A                                     ; None                                                ; 16.676 ns  ; RWBA[1]$latch ; RWBA[1] ; MOVB       ;
+; N/A                                     ; None                                                ; 16.672 ns  ; ZFE$latch     ; ZFE     ; NOP        ;
+; N/A                                     ; None                                                ; 16.632 ns  ; IN_PC$latch   ; IN_PC   ; MOVB       ;
+; N/A                                     ; None                                                ; 16.629 ns  ; DL$latch      ; DL      ; SHR        ;
+; N/A                                     ; None                                                ; 16.617 ns  ; SME$latch     ; SME     ; MOVB       ;
+; N/A                                     ; None                                                ; 16.614 ns  ; XL$latch      ; MADD[1] ; MOVC       ;
+; N/A                                     ; None                                                ; 16.614 ns  ; XL$latch      ; XL      ; MOVC       ;
+; N/A                                     ; None                                                ; 16.613 ns  ; XL$latch      ; MADD[1] ; SHL        ;
+; N/A                                     ; None                                                ; 16.613 ns  ; XL$latch      ; XL      ; SHL        ;
+; N/A                                     ; None                                                ; 16.598 ns  ; LD_PC$latch   ; LD_PC   ; JC         ;
+; N/A                                     ; None                                                ; 16.578 ns  ; RWBA[1]$latch ; RWBA[1] ; MOVC       ;
+; N/A                                     ; None                                                ; 16.577 ns  ; RWBA[1]$latch ; RWBA[1] ; SHL        ;
+; N/A                                     ; None                                                ; 16.576 ns  ; ZFE$latch     ; ZFE     ; Z          ;
+; N/A                                     ; None                                                ; 16.573 ns  ; RWBA[0]$latch ; RWBA[0] ; C          ;
+; N/A                                     ; None                                                ; 16.561 ns  ; MADD[0]$latch ; MADD[0] ; MOVB       ;
+; N/A                                     ; None                                                ; 16.545 ns  ; FRL$latch     ; FRL     ; MOVB       ;
+; N/A                                     ; None                                                ; 16.539 ns  ; XL$latch      ; MADD[1] ; SHR        ;
+; N/A                                     ; None                                                ; 16.539 ns  ; XL$latch      ; XL      ; SHR        ;
+; N/A                                     ; None                                                ; 16.534 ns  ; IN_PC$latch   ; IN_PC   ; MOVC       ;
+; N/A                                     ; None                                                ; 16.533 ns  ; IN_PC$latch   ; IN_PC   ; SHL        ;
+; N/A                                     ; None                                                ; 16.519 ns  ; SME$latch     ; SME     ; MOVC       ;
+; N/A                                     ; None                                                ; 16.518 ns  ; SME$latch     ; SME     ; SHL        ;
+; N/A                                     ; None                                                ; 16.511 ns  ; LD_PC$latch   ; LD_PC   ; NOP        ;
+; N/A                                     ; None                                                ; 16.503 ns  ; RWBA[1]$latch ; RWBA[1] ; SHR        ;
+; N/A                                     ; None                                                ; 16.490 ns  ; ZFE$latch     ; ZFE     ; ALU        ;
+; N/A                                     ; None                                                ; 16.481 ns  ; F$latch       ; F       ; MOVA       ;
+; N/A                                     ; None                                                ; 16.463 ns  ; MADD[0]$latch ; MADD[0] ; MOVC       ;
+; N/A                                     ; None                                                ; 16.462 ns  ; MADD[0]$latch ; MADD[0] ; SHL        ;
+; N/A                                     ; None                                                ; 16.459 ns  ; IN_PC$latch   ; IN_PC   ; SHR        ;
+; N/A                                     ; None                                                ; 16.447 ns  ; FRL$latch     ; FRL     ; MOVC       ;
+; N/A                                     ; None                                                ; 16.446 ns  ; FRL$latch     ; FRL     ; SHL        ;
+; N/A                                     ; None                                                ; 16.444 ns  ; SME$latch     ; SME     ; SHR        ;
+; N/A                                     ; None                                                ; 16.437 ns  ; F$latch       ; F       ; JZ         ;
+; N/A                                     ; None                                                ; 16.430 ns  ; RAA[0]$latch  ; RAA[0]  ; MOVB       ;
+; N/A                                     ; None                                                ; 16.415 ns  ; RAA[1]$latch  ; RAA[1]  ; MOVB       ;
+; N/A                                     ; None                                                ; 16.415 ns  ; LD_PC$latch   ; LD_PC   ; Z          ;
+; N/A                                     ; None                                                ; 16.388 ns  ; MADD[0]$latch ; MADD[0] ; SHR        ;
+; N/A                                     ; None                                                ; 16.372 ns  ; FRL$latch     ; FRL     ; SHR        ;
+; N/A                                     ; None                                                ; 16.332 ns  ; RAA[0]$latch  ; RAA[0]  ; MOVC       ;
+; N/A                                     ; None                                                ; 16.331 ns  ; RAA[0]$latch  ; RAA[0]  ; SHL        ;
+; N/A                                     ; None                                                ; 16.329 ns  ; LD_PC$latch   ; LD_PC   ; ALU        ;
+; N/A                                     ; None                                                ; 16.321 ns  ; CFE$latch     ; CFE     ; MOVA       ;
+; N/A                                     ; None                                                ; 16.317 ns  ; RAA[1]$latch  ; RAA[1]  ; MOVC       ;
+; N/A                                     ; None                                                ; 16.316 ns  ; RAA[1]$latch  ; RAA[1]  ; SHL        ;
+; N/A                                     ; None                                                ; 16.306 ns  ; RWBA[0]$latch ; RWBA[0] ; JC         ;
+; N/A                                     ; None                                                ; 16.289 ns  ; N_WE$latch    ; N_WE    ; MOVA       ;
+; N/A                                     ; None                                                ; 16.277 ns  ; CFE$latch     ; CFE     ; JZ         ;
+; N/A                                     ; None                                                ; 16.257 ns  ; RAA[0]$latch  ; RAA[0]  ; SHR        ;
+; N/A                                     ; None                                                ; 16.245 ns  ; N_WE$latch    ; N_WE    ; JZ         ;
+; N/A                                     ; None                                                ; 16.242 ns  ; RAA[1]$latch  ; RAA[1]  ; SHR        ;
+; N/A                                     ; None                                                ; 16.233 ns  ; N_CS$latch    ; N_CS    ; MOVA       ;
+; N/A                                     ; None                                                ; 16.219 ns  ; RWBA[0]$latch ; RWBA[0] ; NOP        ;
+; N/A                                     ; None                                                ; 16.189 ns  ; N_CS$latch    ; N_CS    ; JZ         ;
+; N/A                                     ; None                                                ; 16.180 ns  ; FRR$latch     ; FRR     ; MOVA       ;
+; N/A                                     ; None                                                ; 16.142 ns  ; ZFE$latch     ; ZFE     ; JMP        ;
+; N/A                                     ; None                                                ; 16.136 ns  ; FRR$latch     ; FRR     ; JZ         ;
+; N/A                                     ; None                                                ; 16.123 ns  ; RWBA[0]$latch ; RWBA[0] ; Z          ;
+; N/A                                     ; None                                                ; 16.083 ns  ; DL$latch      ; DL      ; MOVA       ;
+; N/A                                     ; None                                                ; 16.050 ns  ; M$latch       ; M       ; C          ;
+; N/A                                     ; None                                                ; 16.039 ns  ; DL$latch      ; DL      ; JZ         ;
+; N/A                                     ; None                                                ; 16.037 ns  ; RWBA[0]$latch ; RWBA[0] ; ALU        ;
+; N/A                                     ; None                                                ; 15.993 ns  ; XL$latch      ; MADD[1] ; MOVA       ;
+; N/A                                     ; None                                                ; 15.993 ns  ; XL$latch      ; XL      ; MOVA       ;
+; N/A                                     ; None                                                ; 15.981 ns  ; LD_PC$latch   ; LD_PC   ; JMP        ;
+; N/A                                     ; None                                                ; 15.957 ns  ; RWBA[1]$latch ; RWBA[1] ; MOVA       ;
+; N/A                                     ; None                                                ; 15.949 ns  ; XL$latch      ; MADD[1] ; JZ         ;
+; N/A                                     ; None                                                ; 15.949 ns  ; XL$latch      ; XL      ; JZ         ;
+; N/A                                     ; None                                                ; 15.913 ns  ; RWBA[1]$latch ; RWBA[1] ; JZ         ;
+; N/A                                     ; None                                                ; 15.913 ns  ; IN_PC$latch   ; IN_PC   ; MOVA       ;
+; N/A                                     ; None                                                ; 15.898 ns  ; SME$latch     ; SME     ; MOVA       ;
+; N/A                                     ; None                                                ; 15.869 ns  ; IN_PC$latch   ; IN_PC   ; JZ         ;
+; N/A                                     ; None                                                ; 15.854 ns  ; SME$latch     ; SME     ; JZ         ;
+; N/A                                     ; None                                                ; 15.842 ns  ; MADD[0]$latch ; MADD[0] ; MOVA       ;
+; N/A                                     ; None                                                ; 15.826 ns  ; FRL$latch     ; FRL     ; MOVA       ;
+; N/A                                     ; None                                                ; 15.798 ns  ; MADD[0]$latch ; MADD[0] ; JZ         ;
+; N/A                                     ; None                                                ; 15.794 ns  ; F$latch       ; F       ; C          ;
+; N/A                                     ; None                                                ; 15.783 ns  ; M$latch       ; M       ; JC         ;
+; N/A                                     ; None                                                ; 15.782 ns  ; FRL$latch     ; FRL     ; JZ         ;
+; N/A                                     ; None                                                ; 15.711 ns  ; RAA[0]$latch  ; RAA[0]  ; MOVA       ;
+; N/A                                     ; None                                                ; 15.696 ns  ; RAA[1]$latch  ; RAA[1]  ; MOVA       ;
+; N/A                                     ; None                                                ; 15.696 ns  ; M$latch       ; M       ; NOP        ;
+; N/A                                     ; None                                                ; 15.689 ns  ; RWBA[0]$latch ; RWBA[0] ; JMP        ;
+; N/A                                     ; None                                                ; 15.667 ns  ; RAA[0]$latch  ; RAA[0]  ; JZ         ;
+; N/A                                     ; None                                                ; 15.652 ns  ; RAA[1]$latch  ; RAA[1]  ; JZ         ;
+; N/A                                     ; None                                                ; 15.634 ns  ; CFE$latch     ; CFE     ; C          ;
+; N/A                                     ; None                                                ; 15.602 ns  ; N_WE$latch    ; N_WE    ; C          ;
+; N/A                                     ; None                                                ; 15.600 ns  ; M$latch       ; M       ; Z          ;
+; N/A                                     ; None                                                ; 15.546 ns  ; N_CS$latch    ; N_CS    ; C          ;
+; N/A                                     ; None                                                ; 15.527 ns  ; F$latch       ; F       ; JC         ;
+; N/A                                     ; None                                                ; 15.514 ns  ; M$latch       ; M       ; ALU        ;
+; N/A                                     ; None                                                ; 15.493 ns  ; FRR$latch     ; FRR     ; C          ;
+; N/A                                     ; None                                                ; 15.440 ns  ; F$latch       ; F       ; NOP        ;
+; N/A                                     ; None                                                ; 15.396 ns  ; DL$latch      ; DL      ; C          ;
+; N/A                                     ; None                                                ; 15.367 ns  ; CFE$latch     ; CFE     ; JC         ;
+; N/A                                     ; None                                                ; 15.344 ns  ; F$latch       ; F       ; Z          ;
+; N/A                                     ; None                                                ; 15.335 ns  ; N_WE$latch    ; N_WE    ; JC         ;
+; N/A                                     ; None                                                ; 15.306 ns  ; XL$latch      ; MADD[1] ; C          ;
+; N/A                                     ; None                                                ; 15.306 ns  ; XL$latch      ; XL      ; C          ;
+; N/A                                     ; None                                                ; 15.280 ns  ; CFE$latch     ; CFE     ; NOP        ;
+; N/A                                     ; None                                                ; 15.279 ns  ; N_CS$latch    ; N_CS    ; JC         ;
+; N/A                                     ; None                                                ; 15.270 ns  ; RWBA[1]$latch ; RWBA[1] ; C          ;
+; N/A                                     ; None                                                ; 15.258 ns  ; F$latch       ; F       ; ALU        ;
+; N/A                                     ; None                                                ; 15.248 ns  ; N_WE$latch    ; N_WE    ; NOP        ;
+; N/A                                     ; None                                                ; 15.226 ns  ; IN_PC$latch   ; IN_PC   ; C          ;
+; N/A                                     ; None                                                ; 15.226 ns  ; FRR$latch     ; FRR     ; JC         ;
+; N/A                                     ; None                                                ; 15.211 ns  ; SME$latch     ; SME     ; C          ;
+; N/A                                     ; None                                                ; 15.192 ns  ; N_CS$latch    ; N_CS    ; NOP        ;
+; N/A                                     ; None                                                ; 15.184 ns  ; CFE$latch     ; CFE     ; Z          ;
+; N/A                                     ; None                                                ; 15.166 ns  ; M$latch       ; M       ; JMP        ;
+; N/A                                     ; None                                                ; 15.155 ns  ; MADD[0]$latch ; MADD[0] ; C          ;
+; N/A                                     ; None                                                ; 15.152 ns  ; N_WE$latch    ; N_WE    ; Z          ;
+; N/A                                     ; None                                                ; 15.139 ns  ; FRR$latch     ; FRR     ; NOP        ;
+; N/A                                     ; None                                                ; 15.139 ns  ; FRL$latch     ; FRL     ; C          ;
+; N/A                                     ; None                                                ; 15.129 ns  ; DL$latch      ; DL      ; JC         ;
+; N/A                                     ; None                                                ; 15.098 ns  ; CFE$latch     ; CFE     ; ALU        ;
+; N/A                                     ; None                                                ; 15.096 ns  ; N_CS$latch    ; N_CS    ; Z          ;
+; N/A                                     ; None                                                ; 15.066 ns  ; N_WE$latch    ; N_WE    ; ALU        ;
+; N/A                                     ; None                                                ; 15.043 ns  ; FRR$latch     ; FRR     ; Z          ;
+; N/A                                     ; None                                                ; 15.042 ns  ; DL$latch      ; DL      ; NOP        ;
+; N/A                                     ; None                                                ; 15.039 ns  ; XL$latch      ; MADD[1] ; JC         ;
+; N/A                                     ; None                                                ; 15.039 ns  ; XL$latch      ; XL      ; JC         ;
+; N/A                                     ; None                                                ; 15.024 ns  ; RAA[0]$latch  ; RAA[0]  ; C          ;
+; N/A                                     ; None                                                ; 15.010 ns  ; N_CS$latch    ; N_CS    ; ALU        ;
+; N/A                                     ; None                                                ; 15.009 ns  ; RAA[1]$latch  ; RAA[1]  ; C          ;
+; N/A                                     ; None                                                ; 15.003 ns  ; RWBA[1]$latch ; RWBA[1] ; JC         ;
+; N/A                                     ; None                                                ; 14.959 ns  ; IN_PC$latch   ; IN_PC   ; JC         ;
+; N/A                                     ; None                                                ; 14.957 ns  ; FRR$latch     ; FRR     ; ALU        ;
+; N/A                                     ; None                                                ; 14.952 ns  ; XL$latch      ; MADD[1] ; NOP        ;
+; N/A                                     ; None                                                ; 14.952 ns  ; XL$latch      ; XL      ; NOP        ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;               ;         ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+---------------+---------+------------+
+
+
++------------------------------------------------------------+
+; tpd                                                        ;
++-------+-------------------+-----------------+-------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To   ;
++-------+-------------------+-----------------+-------+------+
+; N/A   ; None              ; 9.840 ns        ; IR[7] ; S[3] ;
+; N/A   ; None              ; 9.410 ns        ; IR[5] ; S[1] ;
+; N/A   ; None              ; 8.809 ns        ; IR[6] ; S[2] ;
+; N/A   ; None              ; 8.791 ns        ; IR[4] ; S[0] ;
++-------+-------------------+-----------------+-------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                          ;
++-----------------------------------------+-----------------------------------------------------+-----------+------+---------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From ; To            ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+------+---------------+----------+
+; N/A                                     ; None                                                ; 9.611 ns  ; SHL  ; N_WE$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 9.596 ns  ; SHL  ; FRL$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 9.368 ns  ; Z    ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 9.325 ns  ; MOVA ; F$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 9.178 ns  ; JMP  ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.795 ns  ; Z    ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.767 ns  ; JC   ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.753 ns  ; SHR  ; N_WE$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 8.739 ns  ; SHR  ; FRL$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 8.704 ns  ; MOVC ; F$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 8.681 ns  ; MOVA ; ZFE$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 8.606 ns  ; MOVB ; F$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 8.604 ns  ; JMP  ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.590 ns  ; JZ   ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.547 ns  ; ALU  ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.543 ns  ; JMP  ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 8.518 ns  ; MOVA ; CFE$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 8.498 ns  ; C    ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.318 ns  ; MOVA ; N_WE$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 8.304 ns  ; MOVA ; FRL$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 8.259 ns  ; SHL  ; N_WE$latch    ; MOVB     ;
+; N/A                                     ; None                                                ; 8.244 ns  ; SHL  ; FRL$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 8.194 ns  ; JC   ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.161 ns  ; SHL  ; N_WE$latch    ; MOVC     ;
+; N/A                                     ; None                                                ; 8.160 ns  ; SHL  ; N_WE$latch    ; SHL      ;
+; N/A                                     ; None                                                ; 8.157 ns  ; MOVA ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 8.146 ns  ; SHL  ; FRL$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 8.145 ns  ; SHL  ; FRL$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 8.119 ns  ; Z    ; SME$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 8.109 ns  ; Z    ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 8.088 ns  ; Z    ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 8.086 ns  ; SHL  ; N_WE$latch    ; SHR      ;
+; N/A                                     ; None                                                ; 8.071 ns  ; SHL  ; FRL$latch     ; SHR      ;
+; N/A                                     ; None                                                ; 8.060 ns  ; MOVC ; ZFE$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 8.017 ns  ; ALU  ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 8.017 ns  ; JZ   ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 8.016 ns  ; Z    ; LD_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.973 ns  ; MOVA ; F$latch       ; MOVB     ;
+; N/A                                     ; None                                                ; 7.970 ns  ; ALU  ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 7.962 ns  ; MOVB ; ZFE$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.928 ns  ; JMP  ; SME$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.926 ns  ; JC   ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 7.925 ns  ; C    ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 7.918 ns  ; Z    ; LD_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.917 ns  ; Z    ; LD_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.897 ns  ; MOVC ; CFE$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.875 ns  ; MOVA ; F$latch       ; MOVC     ;
+; N/A                                     ; None                                                ; 7.874 ns  ; MOVA ; F$latch       ; SHL      ;
+; N/A                                     ; None                                                ; 7.847 ns  ; SHR  ; M$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 7.843 ns  ; Z    ; LD_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.826 ns  ; JMP  ; LD_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.800 ns  ; MOVA ; F$latch       ; SHR      ;
+; N/A                                     ; None                                                ; 7.799 ns  ; MOVB ; CFE$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.773 ns  ; SHL  ; M$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 7.728 ns  ; JMP  ; LD_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.727 ns  ; JMP  ; LD_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.715 ns  ; JMP  ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.713 ns  ; MOVA ; FRR$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.697 ns  ; MOVC ; N_WE$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.683 ns  ; MOVC ; FRL$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.661 ns  ; SHR  ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.659 ns  ; C    ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 7.653 ns  ; JMP  ; LD_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.599 ns  ; MOVB ; N_WE$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.587 ns  ; SHL  ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.585 ns  ; MOVB ; FRL$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.574 ns  ; MOVA ; M$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 7.540 ns  ; SHL  ; N_WE$latch    ; MOVA     ;
+; N/A                                     ; None                                                ; 7.536 ns  ; MOVC ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.525 ns  ; SHL  ; FRL$latch     ; MOVA     ;
+; N/A                                     ; None                                                ; 7.518 ns  ; JC   ; SME$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.496 ns  ; SHL  ; N_WE$latch    ; JZ       ;
+; N/A                                     ; None                                                ; 7.487 ns  ; JC   ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.481 ns  ; SHL  ; FRL$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 7.443 ns  ; Z    ; IN_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.438 ns  ; MOVB ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.415 ns  ; JC   ; LD_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.401 ns  ; SHR  ; N_WE$latch    ; MOVB     ;
+; N/A                                     ; None                                                ; 7.387 ns  ; SHR  ; FRL$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 7.367 ns  ; ALU  ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.352 ns  ; MOVC ; F$latch       ; MOVB     ;
+; N/A                                     ; None                                                ; 7.345 ns  ; Z    ; IN_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.344 ns  ; Z    ; IN_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.341 ns  ; JZ   ; SME$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.329 ns  ; MOVA ; ZFE$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 7.324 ns  ; MOVA ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 7.317 ns  ; JC   ; LD_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.316 ns  ; JC   ; LD_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.310 ns  ; JZ   ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.303 ns  ; SHR  ; N_WE$latch    ; MOVC     ;
+; N/A                                     ; None                                                ; 7.302 ns  ; SHR  ; N_WE$latch    ; SHL      ;
+; N/A                                     ; None                                                ; 7.297 ns  ; Z    ; LD_PC$latch   ; MOVA     ;
+; N/A                                     ; None                                                ; 7.293 ns  ; ALU  ; SME$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.289 ns  ; SHR  ; FRL$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 7.288 ns  ; SHR  ; FRL$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 7.276 ns  ; SHR  ; FRR$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.270 ns  ; Z    ; IN_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.254 ns  ; MOVB ; F$latch       ; MOVB     ;
+; N/A                                     ; None                                                ; 7.254 ns  ; MOVC ; F$latch       ; MOVC     ;
+; N/A                                     ; None                                                ; 7.254 ns  ; MOVA ; F$latch       ; MOVA     ;
+; N/A                                     ; None                                                ; 7.253 ns  ; MOVC ; F$latch       ; SHL      ;
+; N/A                                     ; None                                                ; 7.253 ns  ; Z    ; LD_PC$latch   ; JZ       ;
+; N/A                                     ; None                                                ; 7.252 ns  ; JMP  ; IN_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.249 ns  ; C    ; SME$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.242 ns  ; JC   ; LD_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.238 ns  ; JZ   ; LD_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.231 ns  ; MOVA ; ZFE$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 7.230 ns  ; MOVA ; ZFE$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 7.228 ns  ; SHR  ; N_WE$latch    ; SHR      ;
+; N/A                                     ; None                                                ; 7.218 ns  ; C    ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.214 ns  ; SHR  ; FRL$latch     ; SHR      ;
+; N/A                                     ; None                                                ; 7.210 ns  ; MOVA ; F$latch       ; JZ       ;
+; N/A                                     ; None                                                ; 7.195 ns  ; ALU  ; LD_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.191 ns  ; JMP  ; DL$latch      ; MOVB     ;
+; N/A                                     ; None                                                ; 7.185 ns  ; NOP  ; N_CS$latch    ; NOT0     ;
+; N/A                                     ; None                                                ; 7.179 ns  ; MOVC ; F$latch       ; SHR      ;
+; N/A                                     ; None                                                ; 7.166 ns  ; MOVA ; CFE$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 7.156 ns  ; MOVB ; F$latch       ; MOVC     ;
+; N/A                                     ; None                                                ; 7.156 ns  ; MOVA ; ZFE$latch     ; SHR      ;
+; N/A                                     ; None                                                ; 7.155 ns  ; MOVB ; F$latch       ; SHL      ;
+; N/A                                     ; None                                                ; 7.154 ns  ; JMP  ; IN_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.153 ns  ; JMP  ; IN_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.146 ns  ; C    ; LD_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 7.140 ns  ; JZ   ; LD_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.139 ns  ; JZ   ; LD_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.107 ns  ; JMP  ; LD_PC$latch   ; MOVA     ;
+; N/A                                     ; None                                                ; 7.097 ns  ; ALU  ; LD_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.096 ns  ; ALU  ; LD_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.093 ns  ; JMP  ; DL$latch      ; MOVC     ;
+; N/A                                     ; None                                                ; 7.092 ns  ; JMP  ; DL$latch      ; SHL      ;
+; N/A                                     ; None                                                ; 7.092 ns  ; MOVC ; FRR$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 7.081 ns  ; MOVB ; F$latch       ; SHR      ;
+; N/A                                     ; None                                                ; 7.079 ns  ; JMP  ; IN_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.068 ns  ; MOVA ; CFE$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 7.067 ns  ; MOVA ; CFE$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 7.065 ns  ; JZ   ; LD_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.063 ns  ; JMP  ; LD_PC$latch   ; JZ       ;
+; N/A                                     ; None                                                ; 7.048 ns  ; C    ; LD_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 7.047 ns  ; C    ; LD_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 7.022 ns  ; ALU  ; LD_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 7.018 ns  ; JMP  ; DL$latch      ; SHR      ;
+; N/A                                     ; None                                                ; 7.016 ns  ; JZ   ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 6.994 ns  ; MOVB ; FRR$latch     ; NOT0     ;
+; N/A                                     ; None                                                ; 6.993 ns  ; MOVA ; CFE$latch     ; SHR      ;
+; N/A                                     ; None                                                ; 6.973 ns  ; C    ; LD_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 6.966 ns  ; MOVA ; N_WE$latch    ; MOVB     ;
+; N/A                                     ; None                                                ; 6.953 ns  ; MOVC ; M$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 6.952 ns  ; MOVA ; FRL$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 6.868 ns  ; MOVA ; N_WE$latch    ; MOVC     ;
+; N/A                                     ; None                                                ; 6.867 ns  ; MOVA ; N_WE$latch    ; SHL      ;
+; N/A                                     ; None                                                ; 6.855 ns  ; MOVB ; M$latch       ; NOT0     ;
+; N/A                                     ; None                                                ; 6.854 ns  ; MOVA ; FRL$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 6.853 ns  ; MOVA ; FRL$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 6.853 ns  ; SHL  ; N_WE$latch    ; C        ;
+; N/A                                     ; None                                                ; 6.842 ns  ; JC   ; IN_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 6.838 ns  ; SHL  ; FRL$latch     ; C        ;
+; N/A                                     ; None                                                ; 6.805 ns  ; MOVA ; N_CS$latch    ; MOVB     ;
+; N/A                                     ; None                                                ; 6.794 ns  ; MOVA ; DL$latch      ; NOT0     ;
+; N/A                                     ; None                                                ; 6.793 ns  ; MOVA ; N_WE$latch    ; SHR      ;
+; N/A                                     ; None                                                ; 6.780 ns  ; MOVA ; RAA[1]$latch  ; NOT0     ;
+; N/A                                     ; None                                                ; 6.779 ns  ; MOVA ; FRL$latch     ; SHR      ;
+; N/A                                     ; None                                                ; 6.778 ns  ; SHR  ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 6.767 ns  ; Z    ; SME$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 6.757 ns  ; Z    ; DL$latch      ; MOVB     ;
+; N/A                                     ; None                                                ; 6.747 ns  ; MOVA ; IN_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 6.744 ns  ; JC   ; IN_PC$latch   ; MOVC     ;
+; N/A                                     ; None                                                ; 6.743 ns  ; JC   ; IN_PC$latch   ; SHL      ;
+; N/A                                     ; None                                                ; 6.736 ns  ; Z    ; N_CS$latch    ; MOVB     ;
+; N/A                                     ; None                                                ; 6.724 ns  ; Z    ; IN_PC$latch   ; MOVA     ;
+; N/A                                     ; None                                                ; 6.708 ns  ; MOVC ; ZFE$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 6.707 ns  ; MOVA ; N_CS$latch    ; MOVC     ;
+; N/A                                     ; None                                                ; 6.706 ns  ; MOVA ; N_CS$latch    ; SHL      ;
+; N/A                                     ; None                                                ; 6.704 ns  ; SHL  ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 6.703 ns  ; MOVC ; LD_PC$latch   ; NOT0     ;
+; N/A                                     ; None                                                ; 6.696 ns  ; JC   ; LD_PC$latch   ; MOVA     ;
+; N/A                                     ; None                                                ; 6.682 ns  ; SHR  ; N_WE$latch    ; MOVA     ;
+; N/A                                     ; None                                                ; 6.680 ns  ; Z    ; IN_PC$latch   ; JZ       ;
+; N/A                                     ; None                                                ; 6.669 ns  ; JC   ; IN_PC$latch   ; SHR      ;
+; N/A                                     ; None                                                ; 6.669 ns  ; Z    ; SME$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 6.668 ns  ; SHR  ; FRL$latch     ; MOVA     ;
+; N/A                                     ; None                                                ; 6.668 ns  ; Z    ; SME$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 6.665 ns  ; ALU  ; DL$latch      ; MOVB     ;
+; N/A                                     ; None                                                ; 6.665 ns  ; JZ   ; IN_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 6.659 ns  ; Z    ; DL$latch      ; MOVC     ;
+; N/A                                     ; None                                                ; 6.658 ns  ; Z    ; DL$latch      ; SHL      ;
+; N/A                                     ; None                                                ; 6.652 ns  ; JC   ; LD_PC$latch   ; JZ       ;
+; N/A                                     ; None                                                ; 6.638 ns  ; SHR  ; N_WE$latch    ; JZ       ;
+; N/A                                     ; None                                                ; 6.638 ns  ; Z    ; N_CS$latch    ; MOVC     ;
+; N/A                                     ; None                                                ; 6.637 ns  ; Z    ; N_CS$latch    ; SHL      ;
+; N/A                                     ; None                                                ; 6.633 ns  ; MOVC ; F$latch       ; MOVA     ;
+; N/A                                     ; None                                                ; 6.632 ns  ; MOVA ; N_CS$latch    ; SHR      ;
+; N/A                                     ; None                                                ; 6.624 ns  ; SHR  ; FRL$latch     ; JZ       ;
+; N/A                                     ; None                                                ; 6.618 ns  ; ALU  ; IN_PC$latch   ; MOVB     ;
+; N/A                                     ; None                                                ; 6.610 ns  ; MOVB ; ZFE$latch     ; MOVB     ;
+; N/A                                     ; None                                                ; 6.610 ns  ; MOVC ; ZFE$latch     ; MOVC     ;
+; N/A                                     ; None                                                ; 6.610 ns  ; MOVA ; ZFE$latch     ; MOVA     ;
+; N/A                                     ; None                                                ; 6.610 ns  ; Z    ; LD_PC$latch   ; C        ;
+; N/A                                     ; None                                                ; 6.609 ns  ; MOVB ; RWBA[1]$latch ; NOT0     ;
+; N/A                                     ; None                                                ; 6.609 ns  ; MOVC ; ZFE$latch     ; SHL      ;
+; N/A                                     ; None                                                ; 6.605 ns  ; MOVB ; LD_PC$latch   ; NOT0     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;      ;               ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+------+---------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 04 21:02:44 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off zjw_kongzhixinhao -c zjw_kongzhixinhao --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "SME$latch" is a latch
+    Warning: Node "LD_IR$latch" is a latch
+    Warning: Node "DL$latch" is a latch
+    Warning: Node "XL$latch" is a latch
+    Warning: Node "F$latch" is a latch
+    Warning: Node "FRL$latch" is a latch
+    Warning: Node "FRR$latch" is a latch
+    Warning: Node "M$latch" is a latch
+    Warning: Node "LD_PC$latch" is a latch
+    Warning: Node "IN_PC$latch" is a latch
+    Warning: Node "N_WE$latch" is a latch
+    Warning: Node "N_CS$latch" is a latch
+    Warning: Node "CFE$latch" is a latch
+    Warning: Node "ZFE$latch" is a latch
+    Warning: Node "MADD[0]$latch" is a latch
+    Warning: Node "RAA[0]$latch" is a latch
+    Warning: Node "RAA[1]$latch" is a latch
+    Warning: Node "RWBA[0]$latch" is a latch
+    Warning: Node "RWBA[1]$latch" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "HALT" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "SM" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "C" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "JZ" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "Z" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "JC" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "SHL" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "NOT0" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "SHR" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "MOVA" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "MOVC" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "MOVB" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "ALU" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "JMP" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "NOP" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+Warning: Found 9 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "SME~16" as buffer
+    Info: Detected gated clock "SME~22" as buffer
+    Info: Detected gated clock "SME~21" as buffer
+    Info: Detected gated clock "process_0~10" as buffer
+    Info: Detected gated clock "process_0~9" as buffer
+    Info: Detected gated clock "SME~19" as buffer
+    Info: Detected gated clock "M~6" as buffer
+    Info: Detected gated clock "CFE~4" as buffer
+    Info: Detected gated clock "process_0~8" as buffer
+Info: tsu for register "ZFE$latch" (data pin = "IR[4]", clock pin = "SM") is 4.136 ns
+    Info: + Longest pin to register delay is 11.733 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_H13; Fanout = 4; PIN Node = 'IR[4]'
+        Info: 2: + IC(7.501 ns) + CELL(0.114 ns) = 9.084 ns; Loc. = LC_X6_Y7_N7; Fanout = 1; COMB Node = 'ZFE~5'
+        Info: 3: + IC(1.210 ns) + CELL(0.590 ns) = 10.884 ns; Loc. = LC_X5_Y6_N5; Fanout = 1; COMB Node = 'ZFE~6'
+        Info: 4: + IC(0.407 ns) + CELL(0.442 ns) = 11.733 ns; Loc. = LC_X5_Y6_N3; Fanout = 1; REG Node = 'ZFE$latch'
+        Info: Total cell delay = 2.615 ns ( 22.29 % )
+        Info: Total interconnect delay = 9.118 ns ( 77.71 % )
+    Info: + Micro setup delay of destination is 0.829 ns
+    Info: - Shortest clock path from clock "SM" to destination register is 8.426 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K4; Fanout = 9; CLK Node = 'SM'
+        Info: 2: + IC(1.524 ns) + CELL(0.292 ns) = 3.285 ns; Loc. = LC_X6_Y7_N4; Fanout = 11; COMB Node = 'SME~22'
+        Info: 3: + IC(4.849 ns) + CELL(0.292 ns) = 8.426 ns; Loc. = LC_X5_Y6_N3; Fanout = 1; REG Node = 'ZFE$latch'
+        Info: Total cell delay = 2.053 ns ( 24.37 % )
+        Info: Total interconnect delay = 6.373 ns ( 75.63 % )
+Info: tco from clock "NOT0" to destination pin "ZFE" through register "ZFE$latch" is 19.784 ns
+    Info: + Longest clock path from clock "NOT0" to source register is 14.223 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_L14; Fanout = 3; CLK Node = 'NOT0'
+        Info: 2: + IC(3.299 ns) + CELL(0.292 ns) = 5.060 ns; Loc. = LC_X1_Y7_N8; Fanout = 3; COMB Node = 'M~6'
+        Info: 3: + IC(1.254 ns) + CELL(0.114 ns) = 6.428 ns; Loc. = LC_X1_Y6_N2; Fanout = 5; COMB Node = 'SME~19'
+        Info: 4: + IC(0.444 ns) + CELL(0.292 ns) = 7.164 ns; Loc. = LC_X1_Y6_N5; Fanout = 3; COMB Node = 'SME~21'
+        Info: 5: + IC(1.476 ns) + CELL(0.442 ns) = 9.082 ns; Loc. = LC_X6_Y7_N4; Fanout = 11; COMB Node = 'SME~22'
+        Info: 6: + IC(4.849 ns) + CELL(0.292 ns) = 14.223 ns; Loc. = LC_X5_Y6_N3; Fanout = 1; REG Node = 'ZFE$latch'
+        Info: Total cell delay = 2.901 ns ( 20.40 % )
+        Info: Total interconnect delay = 11.322 ns ( 79.60 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 5.561 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X5_Y6_N3; Fanout = 1; REG Node = 'ZFE$latch'
+        Info: 2: + IC(3.437 ns) + CELL(2.124 ns) = 5.561 ns; Loc. = PIN_K15; Fanout = 0; PIN Node = 'ZFE'
+        Info: Total cell delay = 2.124 ns ( 38.19 % )
+        Info: Total interconnect delay = 3.437 ns ( 61.81 % )
+Info: Longest tpd from source pin "IR[7]" to destination pin "S[3]" is 9.840 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_M4; Fanout = 4; PIN Node = 'IR[7]'
+    Info: 2: + IC(6.247 ns) + CELL(2.124 ns) = 9.840 ns; Loc. = PIN_G4; Fanout = 0; PIN Node = 'S[3]'
+    Info: Total cell delay = 3.593 ns ( 36.51 % )
+    Info: Total interconnect delay = 6.247 ns ( 63.49 % )
+Info: th for register "N_WE$latch" (data pin = "SHL", clock pin = "NOT0") is 9.611 ns
+    Info: + Longest clock path from clock "NOT0" to destination register is 14.075 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_L14; Fanout = 3; CLK Node = 'NOT0'
+        Info: 2: + IC(3.299 ns) + CELL(0.292 ns) = 5.060 ns; Loc. = LC_X1_Y7_N8; Fanout = 3; COMB Node = 'M~6'
+        Info: 3: + IC(1.254 ns) + CELL(0.114 ns) = 6.428 ns; Loc. = LC_X1_Y6_N2; Fanout = 5; COMB Node = 'SME~19'
+        Info: 4: + IC(0.444 ns) + CELL(0.292 ns) = 7.164 ns; Loc. = LC_X1_Y6_N5; Fanout = 3; COMB Node = 'SME~21'
+        Info: 5: + IC(1.479 ns) + CELL(0.442 ns) = 9.085 ns; Loc. = LC_X6_Y7_N5; Fanout = 8; COMB Node = 'SME~16'
+        Info: 6: + IC(4.876 ns) + CELL(0.114 ns) = 14.075 ns; Loc. = LC_X1_Y7_N9; Fanout = 1; REG Node = 'N_WE$latch'
+        Info: Total cell delay = 2.723 ns ( 19.35 % )
+        Info: Total interconnect delay = 11.352 ns ( 80.65 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: - Shortest pin to register delay is 4.464 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_J4; Fanout = 3; CLK Node = 'SHL'
+        Info: 2: + IC(2.031 ns) + CELL(0.114 ns) = 3.614 ns; Loc. = LC_X1_Y7_N3; Fanout = 1; COMB Node = 'N_WE~6'
+        Info: 3: + IC(0.408 ns) + CELL(0.442 ns) = 4.464 ns; Loc. = LC_X1_Y7_N9; Fanout = 1; REG Node = 'N_WE$latch'
+        Info: Total cell delay = 2.025 ns ( 45.36 % )
+        Info: Total interconnect delay = 2.439 ns ( 54.64 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 194 megabytes
+    Info: Processing ended: Mon Nov 04 21:02:45 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

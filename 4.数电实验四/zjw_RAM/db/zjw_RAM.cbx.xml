@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="zjw_RAM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|zjw_RAM|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_rl91.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

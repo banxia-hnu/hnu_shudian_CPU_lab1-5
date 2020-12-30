@@ -1,0 +1,10 @@
+|zjw_canshuhua
+in1[0] => Mux0.IN3
+in1[1] => Mux0.IN2
+in1[2] => Mux0.IN1
+in1[3] => Mux0.IN0
+enable[0] => Mux0.IN5
+enable[1] => Mux0.IN4
+out1 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

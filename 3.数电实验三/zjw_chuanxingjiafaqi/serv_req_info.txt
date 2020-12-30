@@ -1,0 +1,18 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x576887b2: mfc90 + 0x887b2
+	0x00794e45: resr_sfw + 0x4e45 (resr_sfw_dll_get_template_classes + 0xad5)
+	0x5765c0b4: mfc90 + 0x5c0b4
+	</callstack>
+	<error>Current editor: RPW, SFW, WED, GED, STED, STED</error>
+	<date>Tue Nov 19 18:45:00 2019</date>
+	<version>Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition</version>
+	<full_error>Access Violation at 0X576887B2
+Current editor: RPW, SFW, WED, GED, STED, STED
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition </full_error>
+</internal_error>
+

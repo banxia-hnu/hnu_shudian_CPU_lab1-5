@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Nov 05 21:52:52 2019
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : zjw_8_1
+Top-level Entity Name : zjw_8_1
+Family : Cyclone
+Device : EP1C4F324C8
+Timing Models : Final
+Total logic elements : 1 / 4,000 ( < 1 % )
+Total pins : 8 / 249 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 78,336 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

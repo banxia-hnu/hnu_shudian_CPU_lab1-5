@@ -1,0 +1,40 @@
+|zjw_PCjishuqi
+CIN[0] => d~7.DATAB
+CIN[1] => d~6.DATAB
+CIN[2] => d~5.DATAB
+CIN[3] => d~4.DATAB
+CIN[4] => d~3.DATAB
+CIN[5] => d~2.DATAB
+CIN[6] => d~1.DATAB
+CIN[7] => d~0.DATAB
+IN_PC => process_0~0.IN0
+IN_PC => process_0~2.IN0
+LD_PC => process_0~2.IN1
+LD_PC => process_0~0.IN1
+Reset => d[7].ACLR
+Reset => d[6].ACLR
+Reset => d[5].ACLR
+Reset => d[4].ACLR
+Reset => d[3].ACLR
+Reset => d[2].ACLR
+Reset => d[1].ACLR
+Reset => d[0].ACLR
+clk => d[7].CLK
+clk => d[6].CLK
+clk => d[5].CLK
+clk => d[4].CLK
+clk => d[3].CLK
+clk => d[2].CLK
+clk => d[1].CLK
+clk => d[0].CLK
+NOP => process_0~1.IN1
+PC[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+PC[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+PC[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+PC[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+PC[4] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
+PC[5] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
+PC[6] <= d[6].DB_MAX_OUTPUT_PORT_TYPE
+PC[7] <= d[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
